@@ -1,0 +1,35 @@
+# Verzeichnis der Auswahllisten in diesem Ordner.
+lists:
+- name: construction-type
+  title:
+    de: Bauweise
+    fr: Mode de construction
+    it: Tipo di costruzione
+    en: Construction type
+  file: construction-type.csv
+- name: connection
+  title:
+    de: Verbindungsart
+    fr: Type d'assemblage
+    it: Tipo di collegamento
+    en: Connection type
+  file: connection.csv
+- name: reuse-status
+  title:
+    de: Re-Use-Status
+    fr: Statut de réemploi
+    it: Stato di riuso
+    en: Reuse status
+  file: reuse-status.csv
+- name: ebkp-gate
+  title:
+    de: eBKP-Gate
+    fr: eBKP-Gate
+    it: eBKP-Gate
+    en: eBKP-Gate
+  placeholder: true
+  note:
+    de: Externe Klassifikation; im Swiss Inv ist keine eigene Auswahlliste hinterlegt.
+    fr: Classification externe; le Swiss Inv ne contient pas de liste de sélection propre.
+    it: Classificazione esterna; lo Swiss Inv non contiene un proprio elenco di selezione.
+    en: External classification; Swiss Inv does not hold its own selection list.

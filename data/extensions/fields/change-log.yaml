@@ -1,0 +1,74 @@
+# Erweiterung: wächst über Vorschläge (siehe CONTRIBUTING.md). Nur ergänzen, nie umbenennen oder löschen.
+entity: changeLog
+title:
+  de: Änderungsprotokoll
+  fr: Journal des modifications
+  it: Registro delle modifiche
+  en: Change log
+layer: extension
+fields:
+- key: logAuthor
+  label:
+    de: Verfasserin
+    fr: Auteur
+    it: Autore
+    en: Author
+  group: changeLog
+  format: text
+  definition:
+    de: Person, die den Eintrag erstellt hat
+    fr: Personne qui a créé l'entrée
+    it: Persona che ha creato la voce
+    en: Person who made the entry
+- key: logDate
+  label:
+    de: Datum
+    fr: Date
+    it: Data
+    en: Date
+  group: changeLog
+  format: date
+  definition:
+    de: Datum des Ereignisses
+    fr: Date de l'événement
+    it: Data dell'evento
+    en: Date of the event
+- key: logEvent
+  label:
+    de: Ereignis
+    fr: Événement
+    it: Evento
+    en: Event
+  group: changeLog
+  format: text
+  definition:
+    de: Was erstellt oder geändert wurde, zum Beispiel «Audit Stufe I erstellt»
+    fr: Ce qui a été créé ou modifié, par exemple «Audit niveau I établi»
+    it: Che cosa è stato creato o modificato, ad esempio «Audit livello I redatto»
+    en: What was created or changed, for example «Audit stage I completed»
+- key: logPhone
+  label:
+    de: Telefon
+    fr: Téléphone
+    it: Telefono
+    en: Phone
+  group: changeLog
+  format: phone
+  definition:
+    de: Telefonnummer der Verfasserin
+    fr: Numéro de téléphone de l'auteur
+    it: Numero di telefono dell'autore
+    en: Telephone number of the author
+- key: logEmail
+  label:
+    de: E-Mail
+    fr: E-mail
+    it: E-mail
+    en: Email
+  group: changeLog
+  format: email
+  definition:
+    de: E-Mail-Adresse der Verfasserin
+    fr: Adresse e-mail de l'auteur
+    it: Indirizzo e-mail dell'autore
+    en: Email address of the author

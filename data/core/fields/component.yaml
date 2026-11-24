@@ -1,0 +1,321 @@
+# Stabiler Kern (Kerndatensatz gemäss Normentwurf): Änderungen nur mit einer neuen Ausgabe der Norm (siehe CONTRIBUTING.md).
+# groups: Reihenfolge der Gruppen in den erzeugten Dokumenten (gilt auch für Erweiterungen).
+entity: component
+title:
+  de: Re-Use-Bauteile
+  fr: Éléments de réemploi
+  it: Componenti di riuso
+  en: Reuse components
+layer: core
+groups:
+- identification
+- quantity
+- dimensions
+- details
+- assessment
+- logistics
+- conditions
+- analysis
+- furtherAttributes
+- technical
+- platform
+fields:
+- key: name
+  label:
+    de: Bezeichnung
+    fr: Désignation
+    it: Denominazione
+    en: Name
+  group: identification
+  format: text
+  definition:
+    de: Kurze Bezeichnung
+    fr: Désignation courte
+    it: Denominazione breve
+    en: Short name
+- key: componentId
+  label:
+    de: Bauteil-ID
+    fr: ID de l'élément
+    it: ID del componente
+    en: Component ID
+  group: identification
+  format: text
+  definition:
+    de: Nummer zur Identifikation des DPPs; Format und Vergabe der ID sind durch den Swiss Inv nicht vorgegeben
+    fr: Numéro d'identification du DPP; le format et l'attribution de l'ID ne sont pas prescrits par le Swiss Inv
+    it: Numero di identificazione del DPP; il formato e l'assegnazione dell'ID non sono prescritti dallo Swiss Inv
+    en: Number identifying the DPP; format and assignment of the ID are not prescribed by Swiss Inv
+- key: ebkphCode
+  label:
+    de: eBKP-H Code
+    fr: Code eCCC-Bât
+    it: Codice eCCC-E
+    en: eBKP-H code
+  group: identification
+  format: code
+  list: ebkph
+  definition:
+    de: Nach eBKP-H SN 506 511; Code und Bezeichnung sind in getrennten Datenfeldern abzubilden; eine Auswahl möglicher eBKP-H ist in der Referenztabelle eBKP-H gelistet
+    fr: Selon eCCC-Bât SN 506 511; le code et la désignation doivent figurer dans des champs séparés; une sélection de codes possibles figure dans le tableau de référence eCCC-Bât
+    it: Secondo eCCC-E SN 506 511; codice e denominazione vanno indicati in campi separati; una selezione di codici possibili è riportata nella tabella di riferimento eCCC-E
+    en: According to eBKP-H SN 506 511; code and label are to be given in separate data fields; a selection of possible codes is listed in the eBKP-H reference table
+- key: ebkphLabel
+  label:
+    de: eBKP-H Bezeichnung
+    fr: Désignation eCCC-Bât
+    it: Denominazione eCCC-E
+    en: eBKP-H label
+  group: identification
+  format: text
+  definition:
+    de: Bezeichnung zum eBKP-H Code; Code und Bezeichnung sind in getrennten Datenfeldern abzubilden
+    fr: Désignation correspondant au code eCCC-Bât; le code et la désignation doivent figurer dans des champs séparés
+    it: Denominazione corrispondente al codice eCCC-E; codice e denominazione vanno indicati in campi separati
+    en: Label belonging to the eBKP-H code; code and label are to be given in separate data fields
+- key: positionInDonorBuilding
+  label:
+    de: Verortung im Quellobjekt
+    fr: Localisation dans le bâtiment source
+    it: Ubicazione nell'edificio di origine
+    en: Position in donor building
+  group: identification
+  format: multiline
+  definition:
+    de: Beschreibung der Verortung im Quellobjekt, zum Beispiel Angabe von Geschoss, Raum usw.
+    fr: Description de la localisation dans le bâtiment source, par exemple étage, local, etc.
+    it: Descrizione dell'ubicazione nell'edificio di origine, ad esempio piano, locale ecc.
+    en: Description of the position in the donor building, for example floor, room, etc.
+- key: quantityMin
+  label:
+    de: Menge (min)
+    fr: Quantité (min)
+    it: Quantità (min)
+    en: Quantity (min)
+  group: quantity
+  format: number
+  definition:
+    de: Die Menge kann bewusst unscharf als Bereich mit Ober- und Untergrenze angegeben werden; für eine präzise Angabe den gleichen Wert in beide Felder eintragen
+    fr: La quantité peut être indiquée volontairement de manière approximative sous forme de plage avec une limite inférieure et une limite supérieure; pour une indication précise, saisir la même valeur dans les deux champs
+    it: La quantità può essere indicata volutamente in modo approssimativo come intervallo con limite inferiore e superiore; per un'indicazione precisa inserire lo stesso valore in entrambi i campi
+    en: The quantity may deliberately be given as a range with a lower and an upper limit; for a precise figure enter the same value in both fields
+- key: quantityMax
+  label:
+    de: Menge (max)
+    fr: Quantité (max)
+    it: Quantità (max)
+    en: Quantity (max)
+  group: quantity
+  format: number
+  definition:
+    de: Die Menge kann bewusst unscharf als Bereich mit Ober- und Untergrenze angegeben werden; für eine präzise Angabe den gleichen Wert in beide Felder eintragen
+    fr: La quantité peut être indiquée volontairement de manière approximative sous forme de plage avec une limite inférieure et une limite supérieure; pour une indication précise, saisir la même valeur dans les deux champs
+    it: La quantità può essere indicata volutamente in modo approssimativo come intervallo con limite inferiore e superiore; per un'indicazione precisa inserire lo stesso valore in entrambi i campi
+    en: The quantity may deliberately be given as a range with a lower and an upper limit; for a precise figure enter the same value in both fields
+- key: unit
+  label:
+    de: Einheit
+    fr: Unité
+    it: Unità
+    en: Unit
+  group: quantity
+  format: code
+  list: unit
+  definition:
+    de: Empfohlen wird eine Einheit, die für eine Vermittlung der Bauteile geeignet ist
+    fr: Il est recommandé de choisir une unité adaptée au placement des éléments
+    it: Si raccomanda un'unità adatta al collocamento dei componenti
+    en: A unit suitable for placing the components with takers is recommended
+- key: zDim
+  label:
+    de: Aussenmass Höhe
+    fr: Dimension extérieure hauteur
+    it: Dimensione esterna altezza
+    en: Outer dimension height
+  group: dimensions
+  format: number
+  unit: cm
+  definition:
+    de: Die drei Aussenmasse sollen die einheitliche Angabe von Abmessungen für möglichst allfällige Bauteilformen standardisieren; sie orientieren sich am Begrenzungsquader des IFC-Standards von buildingSMART
+    fr: Les trois dimensions extérieures visent à uniformiser l'indication des dimensions pour le plus grand nombre possible de formes d'éléments; elles se fondent sur le parallélépipède englobant du standard IFC de buildingSMART
+    it: Le tre dimensioni esterne mirano a uniformare l'indicazione delle misure per il maggior numero possibile di forme di componenti; si basano sul parallelepipedo di delimitazione dello standard IFC di buildingSMART
+    en: The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard
+- key: yDim
+  label:
+    de: Aussenmass Breite
+    fr: Dimension extérieure largeur
+    it: Dimensione esterna larghezza
+    en: Outer dimension width
+  group: dimensions
+  format: number
+  unit: cm
+  definition:
+    de: Die drei Aussenmasse sollen die einheitliche Angabe von Abmessungen für möglichst allfällige Bauteilformen standardisieren; sie orientieren sich am Begrenzungsquader des IFC-Standards von buildingSMART
+    fr: Les trois dimensions extérieures visent à uniformiser l'indication des dimensions pour le plus grand nombre possible de formes d'éléments; elles se fondent sur le parallélépipède englobant du standard IFC de buildingSMART
+    it: Le tre dimensioni esterne mirano a uniformare l'indicazione delle misure per il maggior numero possibile di forme di componenti; si basano sul parallelepipedo di delimitazione dello standard IFC di buildingSMART
+    en: The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard
+- key: xDim
+  label:
+    de: Aussenmass Tiefe / Länge
+    fr: Dimension extérieure profondeur / longueur
+    it: Dimensione esterna profondità / lunghezza
+    en: Outer dimension depth / length
+  group: dimensions
+  format: number
+  unit: cm
+  definition:
+    de: Die drei Aussenmasse sollen die einheitliche Angabe von Abmessungen für möglichst allfällige Bauteilformen standardisieren; sie orientieren sich am Begrenzungsquader des IFC-Standards von buildingSMART
+    fr: Les trois dimensions extérieures visent à uniformiser l'indication des dimensions pour le plus grand nombre possible de formes d'éléments; elles se fondent sur le parallélépipède englobant du standard IFC de buildingSMART
+    it: Le tre dimensioni esterne mirano a uniformare l'indicazione delle misure per il maggior numero possibile di forme di componenti; si basano sul parallelepipedo di delimitazione dello standard IFC di buildingSMART
+    en: The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard
+- key: dimensionNotes
+  label:
+    de: Freie Dimensionsangaben
+    fr: Indications libres sur les dimensions
+    it: Indicazioni libere sulle dimensioni
+    en: Free dimension details
+  group: dimensions
+  format: multiline
+  definition:
+    de: Angabe relevanter Dimensionen, welche nicht durch die Aussenmasse oder sonstige Attribute abgedeckt sind
+    fr: Indication des dimensions pertinentes qui ne sont pas couvertes par les dimensions extérieures ou d'autres attributs
+    it: Indicazione delle dimensioni rilevanti non coperte dalle dimensioni esterne o da altri attributi
+    en: Relevant dimensions not covered by the outer dimensions or other attributes
+- key: description
+  label:
+    de: Weitere Informationen
+    fr: Informations complémentaires
+    it: Ulteriori informazioni
+    en: Further information
+  group: details
+  format: multiline
+  definition:
+    de: Beschreibung relevanter Eigenschaften, welche nicht durch die Aussenmasse oder sonstige Attribute abgedeckt sind
+    fr: Description des propriétés pertinentes qui ne sont pas couvertes par les dimensions extérieures ou d'autres attributs
+    it: Descrizione delle proprietà rilevanti non coperte dalle dimensioni esterne o da altri attributi
+    en: Description of relevant properties not covered by the outer dimensions or other attributes
+- key: material
+  label:
+    de: Materialkategorie
+    fr: Catégorie de matériau
+    it: Categoria di materiale
+    en: Material category
+  group: details
+  format: code
+  list: material
+  multiple: true
+  definition:
+    de: Materialkategorien, aus denen das Bauteil hauptsächlich besteht; es können mehrere gewählt werden, bei einem Holzfenster bspw. Vollholz für den Rahmen und Glas für die Verglasung
+    fr: Catégories de matériau dont l'élément est principalement constitué; plusieurs peuvent être choisies, par exemple, pour une fenêtre en bois, bois massif pour le cadre et verre pour le vitrage
+    it: Categorie di materiale di cui il componente è principalmente costituito; se ne possono scegliere più d'una, ad esempio, per una finestra in legno, legno massiccio per il telaio e vetro per la vetratura
+    en: Material categories the component mainly consists of; several can be chosen, for example solid wood for the frame and glass for the glazing of a timber window
+- key: materialNotes
+  label:
+    de: Zusatzinformation Material
+    fr: Informations complémentaires sur le matériau
+    it: Informazioni supplementari sul materiale
+    en: Material notes
+  group: details
+  format: multiline
+  definition:
+    de: Ausführungen zum Material, welche nicht durch die Materialkategorie abgedeckt sind
+    fr: Précisions sur le matériau qui ne sont pas couvertes par la catégorie de matériau
+    it: Precisazioni sul materiale non coperte dalla categoria di materiale
+    en: Details on the material not covered by the material category
+- key: pollutantReport
+  label:
+    de: Schadstoffgutachten
+    fr: Diagnostic polluants
+    it: Perizia sulle sostanze nocive
+    en: Pollutant report
+  group: assessment
+  format: code
+  list: pollutant-report
+  definition:
+    de: Angabe, ob für das Bauteil eine Beurteilung der Schadstoffbelastung durch ein Schadstoffgutachten vorliegt
+    fr: Indique s'il existe, pour l'élément, une évaluation de la pollution par un diagnostic polluants
+    it: Indica se per il componente è disponibile una valutazione della contaminazione mediante perizia sulle sostanze nocive
+    en: States whether an assessment of contamination by a pollutant report exists for the component
+- key: visualCondition
+  label:
+    de: Visueller Zustand
+    fr: État visuel
+    it: Stato visivo
+    en: Visual condition
+  group: assessment
+  format: code
+  list: visual-condition
+  definition:
+    de: Allfällige Ausführungen zum visuellen Zustand können im Datenfeld «Erläuterung der Empfehlung» ergänzt werden
+    fr: D'éventuelles précisions sur l'état visuel peuvent être ajoutées dans le champ «Explication de la recommandation»
+    it: Eventuali precisazioni sullo stato visivo possono essere aggiunte nel campo «Spiegazione della raccomandazione»
+    en: Any remarks on the visual condition can be added in the data field «Explanation of the recommendation»
+- key: functionalCondition
+  label:
+    de: Funktionaler Zustand
+    fr: État fonctionnel
+    it: Stato funzionale
+    en: Functional condition
+  group: assessment
+  format: code
+  list: functional-condition
+  definition:
+    de: Allfällige Ausführungen zum funktionalen Zustand können im Datenfeld «Erläuterung der Empfehlung» ergänzt werden
+    fr: D'éventuelles précisions sur l'état fonctionnel peuvent être ajoutées dans le champ «Explication de la recommandation»
+    it: Eventuali precisazioni sullo stato funzionale possono essere aggiunte nel campo «Spiegazione della raccomandazione»
+    en: Any remarks on the functional condition can be added in the data field «Explanation of the recommendation»
+- key: demountability
+  label:
+    de: Demontageaufwand
+    fr: Effort de démontage
+    it: Onere di smontaggio
+    en: Dismantling effort
+  group: assessment
+  format: code
+  list: demountability
+  definition:
+    de: Allfällige Ausführungen zum Demontageaufwand können im Datenfeld «Erläuterung der Empfehlung» ergänzt werden
+    fr: D'éventuelles précisions sur l'effort de démontage peuvent être ajoutées dans le champ «Explication de la recommandation»
+    it: Eventuali precisazioni sull'onere di smontaggio possono essere aggiunte nel campo «Spiegazione della raccomandazione»
+    en: Any remarks on the dismantling effort can be added in the data field «Explanation of the recommendation»
+- key: recDetailedAssessment
+  label:
+    de: Empfehlung Detailaufnahme
+    fr: Recommandation relevé détaillé
+    it: Raccomandazione rilievo dettagliato
+    en: Recommendation detailed survey
+  group: assessment
+  format: code
+  list: rec-detailed-assessment
+  definition:
+    de: Die Auditorin des Wiederverwendungs-Audit Stufe I empfiehlt, ob eine vertiefte Aufnahme des Bauteils im Wiederverwendungs-Audit Stufe II durchgeführt werden sollte
+    fr: L'auditeur de l'audit de réemploi de niveau I recommande si un relevé approfondi de l'élément doit être réalisé dans l'audit de réemploi de niveau II
+    it: L'auditor dell'audit di riuso di livello I raccomanda se effettuare un rilievo approfondito del componente nell'audit di riuso di livello II
+    en: The auditor of the reuse audit stage I recommends whether an in-depth survey of the component should be carried out in the reuse audit stage II
+- key: recDistribution
+  label:
+    de: Empfehlung Vermittlung
+    fr: Recommandation placement
+    it: Raccomandazione collocamento
+    en: Recommendation placement
+  group: assessment
+  format: code
+  list: rec-distribution
+  definition:
+    de: Die Auditorin des Wiederverwendungs-Audit Stufe II empfiehlt, ob eine Vermittlung des Bauteils angestrebt werden sollte
+    fr: L'auditeur de l'audit de réemploi de niveau II recommande si un placement de l'élément doit être visé
+    it: L'auditor dell'audit di riuso di livello II raccomanda se puntare al collocamento del componente
+    en: The auditor of the reuse audit stage II recommends whether placement of the component should be sought
+- key: recNotes
+  label:
+    de: Erläuterung der Empfehlung
+    fr: Explication de la recommandation
+    it: Spiegazione della raccomandazione
+    en: Explanation of the recommendation
+  group: assessment
+  format: multiline
+  definition:
+    de: Allfällige Ausführungen zur Bewertung sowie zur Empfehlung für eine Vermittlung des Bauteils
+    fr: Éventuelles précisions sur l'évaluation ainsi que sur la recommandation de placement de l'élément
+    it: Eventuali precisazioni sulla valutazione e sulla raccomandazione di collocamento del componente
+    en: Any remarks on the assessment and on the recommendation to place the component

@@ -1,0 +1,40 @@
+name: Neuer Listenwert
+description: Einen neuen Wert für eine Auswahlliste vorschlagen
+title: "Listenwert: "
+labels: ["vorschlag", "auswahlliste"]
+body:
+  - type: input
+    id: list
+    attributes:
+      label: Auswahlliste
+      placeholder: Verbindungsart
+    validations:
+      required: true
+  - type: input
+    id: label
+    attributes:
+      label: Bezeichnung (Deutsch)
+      placeholder: Verbolzt
+    validations:
+      required: true
+  - type: textarea
+    id: translations
+    attributes:
+      label: Bezeichnung auf Französisch, Italienisch und Englisch
+      description: Soweit bekannt. Fehlende Sprachen ergänzt die Redaktion.
+  - type: input
+    id: key
+    attributes:
+      label: Vorschlag für den Key
+      placeholder: bolted
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition und Abgrenzung
+      description: Was ist gemeint, und wie unterscheidet sich der Wert von den bestehenden?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Beispiel aus der Praxis

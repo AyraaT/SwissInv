@@ -1,0 +1,83 @@
+name: Neues Datenfeld
+description: Ein optionales Datenfeld für das Datenfeldverzeichnis vorschlagen
+title: "Datenfeld: "
+labels: ["vorschlag", "datenfeld"]
+body:
+  - type: input
+    id: label
+    attributes:
+      label: Bezeichnung (Deutsch)
+      placeholder: Feuerwiderstandsklasse
+    validations:
+      required: true
+  - type: textarea
+    id: translations
+    attributes:
+      label: Bezeichnung auf Französisch, Italienisch und Englisch
+      description: Soweit bekannt. Fehlende Sprachen ergänzt die Redaktion.
+  - type: input
+    id: key
+    attributes:
+      label: Vorschlag für den Key
+      description: Englisch, camelCase. Darf leer bleiben, die Redaktion hilft.
+      placeholder: fireResistanceClass
+  - type: dropdown
+    id: entity
+    attributes:
+      label: Gehört zu
+      options:
+        # GENERIERT:START bereiche
+        - "Projekt"
+        - "Kontakte"
+        - "Quellobjekte"
+        - "Re-Use-Bauteile"
+        - "Änderungsprotokoll"
+        # GENERIERT:ENDE
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        # GENERIERT:START formate
+        - "Freitext (einzeilig)"
+        - "Freitext (mehrzeilig)"
+        - "Zahlenwert"
+        - "Ja/Nein"
+        - "Auswahlliste"
+        - "Auswahlliste (Mehrfachauswahl)"
+        - "Kontakt"
+        - "Ländercode nach ISO 3166"
+        - "Telefonnummer"
+        - "E-Mail-Adresse"
+        - "UUID"
+        - "JJJJ"
+        - "JJJJ-MM-TT"
+        - "Postleitzahl"
+        # GENERIERT:ENDE
+        - Anderes (bitte unten beschreiben)
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition
+      description: Was genau wird erfasst? Bei Zahlenwerten bitte die Einheit, bei Auswahllisten die Werte angeben.
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Anwendungsfall
+      description: Wer braucht die Angabe, in welcher Situation und wozu?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Beispiel aus der Praxis
+  - type: textarea
+    id: existing
+    attributes:
+      label: Warum genügen bestehende Datenfelder nicht?

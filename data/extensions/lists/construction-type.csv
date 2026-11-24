@@ -1,0 +1,8 @@
+key,group,de,fr,it,en,definition_de,definition_fr,definition_it,definition_en
+solidHeavy,,Massivbau schwer,Construction massive lourde,Costruzione massiccia pesante,"Solid construction, heavy",,,,
+solidLight,,Massivbau leicht,Construction massive légère,Costruzione massiccia leggera,"Solid construction, light",,,,
+logTimber,,Blockbau Holz,Construction en madriers,Costruzione a blockbau in legno,Log construction,,,,
+lightTimber,,Leichtbau Holz,Construction légère en bois,Costruzione leggera in legno,Lightweight timber construction,,,,
+lightSteel,,Leichtbau Stahl,Construction légère en acier,Costruzione leggera in acciaio,Lightweight steel construction,,,,
+mixed,,Mischbau,Construction mixte,Costruzione mista,Mixed construction,,,,
+modular,,Modulbau,Construction modulaire,Costruzione modulare,Modular construction,,,,

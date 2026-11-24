@@ -1,0 +1,344 @@
+# Wertevorräte des Datenfeldverzeichnisses. Prüfung, Dokumente, Website und Excel-Vorlage lesen sie von hier.
+#
+# groups:       Gruppen, in denen die Datenfelder dargestellt werden (bei einem Datenfeld unter group)
+# formats:      Formate der Datenfelder (bei einem Datenfeld unter format)
+#                 label / label_multiple  Bezeichnung in vier Sprachen (label_multiple: bei Mehrfachauswahl)
+#                 schema                  Abbildung im JSON Schema
+#                 unit: true              das Datenfeld darf eine Einheit aus units tragen
+#                 list: true          das Datenfeld braucht eine Auswahlliste
+#                 excel                   Spaltenbreite und Zellformat in der Excel-Vorlage
+# obligations:  Verpflichtung einer Angabe in einem Audit-Profil, strengste zuerst
+#                 phrase                  Satz auf der Website, {audit} steht für das Audit-Profil
+#                 required: true          fehlende Angaben werden in der Excel-Vorlage markiert;
+#                                         auf der Website ein ausgefülltes statt gestricheltes Symbol
+# units:        Masseinheiten für Zahlenfelder (bei einem Datenfeld unter unit). Nicht zu verwechseln mit der
+#               Auswahlliste unit (Mengeneinheit eines Bauteils: Stk., lfm, m² ...)
+groups:
+  identification:
+    de: Identifikation
+    fr: Identification
+    it: Identificazione
+    en: Identification
+  participants:
+    de: Projektbeteiligte
+    fr: Intervenants du projet
+    it: Partecipanti al progetto
+    en: Project participants
+  contactPerson:
+    de: Ansprechperson
+    fr: Personne de contact
+    it: Persona di contatto
+    en: Contact person
+  address:
+    de: Adresse
+    fr: Adresse
+    it: Indirizzo
+    en: Address
+  contactDetails:
+    de: Kontaktinformation
+    fr: Coordonnées
+    it: Recapiti
+    en: Contact details
+  buildingData:
+    de: Gebäudedaten
+    fr: Données du bâtiment
+    it: Dati dell'edificio
+    en: Building data
+  details:
+    de: Details
+    fr: Détails
+    it: Dettagli
+    en: Details
+  quantity:
+    de: Menge
+    fr: Quantité
+    it: Quantità
+    en: Quantity
+  dimensions:
+    de: Dimensionen
+    fr: Dimensions
+    it: Dimensioni
+    en: Dimensions
+  assessment:
+    de: Bewertung
+    fr: Évaluation
+    it: Valutazione
+    en: Assessment
+  logistics:
+    de: Logistik
+    fr: Logistique
+    it: Logistica
+    en: Logistics
+  conditions:
+    de: Konditionen
+    fr: Conditions
+    it: Condizioni
+    en: Terms
+  analysis:
+    de: Auswertung
+    fr: Analyse
+    it: Analisi
+    en: Analysis
+  furtherAttributes:
+    de: Weitere Attribute
+    fr: Autres attributs
+    it: Altri attributi
+    en: Further attributes
+  technical:
+    de: Technische Angaben
+    fr: Données techniques
+    it: Dati tecnici
+    en: Technical data
+  platform:
+    de: Plattform
+    fr: Plateforme
+    it: Piattaforma
+    en: Platform
+  changeLog:
+    de: Änderungsprotokoll
+    fr: Journal des modifications
+    it: Registro delle modifiche
+    en: Change log
+formats:
+  text:
+    label:
+      de: Freitext (einzeilig)
+      fr: Texte libre (une ligne)
+      it: Testo libero (una riga)
+      en: Free text (single line)
+    schema:
+      type: string
+    excel:
+      width: 24
+  multiline:
+    label:
+      de: Freitext (mehrzeilig)
+      fr: Texte libre (plusieurs lignes)
+      it: Testo libero (più righe)
+      en: Free text (multi-line)
+    schema:
+      type: string
+    excel:
+      width: 42
+  number:
+    label:
+      de: Zahlenwert
+      fr: Valeur numérique
+      it: Valore numerico
+      en: Number
+    schema:
+      type: number
+    unit: true
+    excel:
+      width: 17
+      number_format: General
+  boolean:
+    label:
+      de: Ja/Nein
+      fr: Oui/Non
+      it: Sì/No
+      en: Yes/No
+    schema:
+      type: boolean
+    excel:
+      width: 14
+  code:
+    label:
+      de: Auswahlliste
+      fr: Liste de sélection
+      it: Elenco di selezione
+      en: Code list
+    label_multiple:
+      de: Auswahlliste (Mehrfachauswahl)
+      fr: Liste de sélection (choix multiple)
+      it: Elenco di selezione (scelta multipla)
+      en: Code list (multiple choice)
+    schema:
+      type: string
+    list: true
+    excel:
+      width: 28
+  contact:
+    label:
+      de: Kontakt
+      fr: Contact
+      it: Contatto
+      en: Contact
+    schema:
+      type: string
+    excel:
+      width: 24
+  country:
+    label:
+      de: Ländercode nach ISO 3166
+      fr: Code pays selon ISO 3166
+      it: Codice paese secondo ISO 3166
+      en: Country code according to ISO 3166
+    schema:
+      type: string
+      pattern: ^[A-Z]{2}$
+    excel:
+      width: 10
+  phone:
+    label:
+      de: Telefonnummer
+      fr: Numéro de téléphone
+      it: Numero di telefono
+      en: Telephone number
+    schema:
+      type: string
+    excel:
+      width: 18
+  email:
+    label:
+      de: E-Mail-Adresse
+      fr: Adresse e-mail
+      it: Indirizzo e-mail
+      en: Email address
+    schema:
+      type: string
+    excel:
+      width: 28
+  uuid:
+    label:
+      de: UUID
+      fr: UUID
+      it: UUID
+      en: UUID
+    schema:
+      type: string
+      format: uuid
+    excel:
+      width: 38
+  year:
+    label:
+      de: JJJJ
+      fr: AAAA
+      it: AAAA
+      en: YYYY
+    schema:
+      type: string
+      pattern: ^\d{4}$
+    excel:
+      width: 10
+      number_format: '0'
+  date:
+    label:
+      de: JJJJ-MM-TT
+      fr: AAAA-MM-JJ
+      it: AAAA-MM-GG
+      en: YYYY-MM-DD
+    schema:
+      type: string
+      format: date
+    excel:
+      width: 14
+      number_format: YYYY-MM-DD
+  postalCode:
+    label:
+      de: Postleitzahl
+      fr: Code postal
+      it: Codice postale
+      en: Postal code
+    schema:
+      type: string
+    excel:
+      width: 12
+obligations:
+  muss:
+    label:
+      de: Muss
+      fr: Obligatoire
+      it: Obbligatorio
+      en: Must
+    phrase:
+      de: Verlangt im {audit}
+      fr: Exigé dans l'{audit}
+      it: Richiesto nell'{audit}
+      en: Required in {audit}
+    required: true
+  sollte:
+    label:
+      de: Sollte
+      fr: Recommandé
+      it: Raccomandato
+      en: Should
+    phrase:
+      de: Empfohlen im {audit}
+      fr: Recommandé dans l'{audit}
+      it: Raccomandato nell'{audit}
+      en: Recommended in {audit}
+    required: false
+units:
+  mm:
+    name:
+      de: Millimeter
+      fr: Millimètre
+      it: Millimetro
+      en: Millimetre
+  cm:
+    name:
+      de: Zentimeter
+      fr: Centimètre
+      it: Centimetro
+      en: Centimetre
+  m²:
+    name:
+      de: Quadratmeter
+      fr: Mètre carré
+      it: Metro quadrato
+      en: Square metre
+  m³:
+    name:
+      de: Kubikmeter
+      fr: Mètre cube
+      it: Metro cubo
+      en: Cubic metre
+  l:
+    name:
+      de: Liter
+      fr: Litre
+      it: Litro
+      en: Litre
+  kg:
+    name:
+      de: Kilogramm
+      fr: Kilogramme
+      it: Chilogrammo
+      en: Kilogram
+  kg CO₂-eq:
+    name:
+      de: Kilogramm CO₂-Äquivalente
+      fr: Kilogramme d'équivalent CO₂
+      it: Chilogrammo di CO₂ equivalente
+      en: Kilogram of CO₂ equivalent
+  CHF:
+    name:
+      de: Schweizer Franken
+      fr: Franc suisse
+      it: Franco svizzero
+      en: Swiss franc
+  W/m²K:
+    name:
+      de: Watt pro Quadratmeter und Kelvin
+      fr: Watt par mètre carré-kelvin
+      it: Watt per metro quadrato kelvin
+      en: Watt per square metre kelvin
+  V:
+    name:
+      de: Volt
+      fr: Volt
+      it: Volt
+      en: Volt
+  W:
+    name:
+      de: Watt
+      fr: Watt
+      it: Watt
+      en: Watt
+  A:
+    name:
+      de: Ampere
+      fr: Ampère
+      it: Ampere
+      en: Ampere

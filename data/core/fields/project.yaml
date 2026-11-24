@@ -1,0 +1,87 @@
+# Stabiler Kern: Änderungen nur mit einer neuen Ausgabe der Norm (siehe CONTRIBUTING.md).
+entity: project
+title:
+  de: Projekt
+  fr: Projet
+  it: Progetto
+  en: Project
+layer: core
+fields:
+- key: projectName
+  label:
+    de: Projektname
+    fr: Nom du projet
+    it: Nome del progetto
+    en: Project name
+  group: identification
+  format: text
+  definition:
+    de: Bezeichnung des Projekts, unter dem ein oder mehrere Quellobjekte zusammengefasst werden
+    fr: Désignation du projet regroupant un ou plusieurs bâtiments sources
+    it: Denominazione del progetto che raggruppa uno o più edifici di origine
+    en: Name of the project under which one or more donor buildings are grouped
+- key: projectId
+  label:
+    de: Projekt-ID
+    fr: ID du projet
+    it: ID del progetto
+    en: Project ID
+  group: identification
+  format: text
+  definition:
+    de: Kennung des Projekts; Format und Vergabe der ID sind durch den Swiss Inv nicht vorgegeben
+    fr: Identifiant du projet; le format et l'attribution de l'ID ne sont pas prescrits par le Swiss Inv
+    it: Identificativo del progetto; il formato e l'assegnazione dell'ID non sono prescritti dallo Swiss Inv
+    en: Identifier of the project; format and assignment of the ID are not prescribed by Swiss Inv
+- key: projectOwner
+  label:
+    de: Eigentümerin
+    fr: Propriétaire
+    it: Proprietario
+    en: Owner
+  group: participants
+  format: contact
+  definition:
+    de: Eigentümerin der betroffenen Quellobjekte
+    fr: Propriétaire des bâtiments sources concernés
+    it: Proprietario degli edifici di origine interessati
+    en: Owner of the donor buildings concerned
+- key: projectPlanner
+  label:
+    de: Planerin
+    fr: Planificateur
+    it: Progettista
+    en: Planner
+  group: participants
+  format: contact
+  definition:
+    de: Planerin des Um- oder Rückbaus
+    fr: Bureau chargé de la planification de la transformation ou de la déconstruction
+    it: Progettista della trasformazione o della decostruzione
+    en: Planner of the conversion or deconstruction
+- key: projectAuditClient
+  label:
+    de: Auftraggeberin
+    fr: Mandant
+    it: Committente
+    en: Client
+  group: participants
+  format: contact
+  definition:
+    de: Auftraggeberin des Wiederverwendungs-Audits
+    fr: Mandant de l'audit de réemploi
+    it: Committente dell'audit di riuso
+    en: Client commissioning the reuse audit
+- key: projectAuditor
+  label:
+    de: Auftragnehmerin
+    fr: Mandataire
+    it: Mandatario
+    en: Auditor
+  group: participants
+  format: contact
+  definition:
+    de: Auftragnehmerin, die das Wiederverwendungs-Audit durchführt
+    fr: Mandataire qui réalise l'audit de réemploi
+    it: Mandatario che esegue l'audit di riuso
+    en: Contractor carrying out the reuse audit

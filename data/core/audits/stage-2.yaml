@@ -1,0 +1,236 @@
+# Mindestumfang pro Bauteil im Wiederverwendungs-Audit Stufe II.
+# obligation: muss | sollte
+# unresolved: in der Normtabelle genannte Datenfelder, die im Datenfeldverzeichnis
+#             (noch) nicht existieren
+# entity bei einer Anforderung: Bereich des Datenfelds, wenn es kein Bauteil-Datenfeld ist.
+# label: Name des Blatts in der Excel-Vorlage und des Filters auf der Website; short: Spaltenkopf in Tabellen.
+profile: stage-2
+order: 2
+title:
+  de: Wiederverwendungs-Audit Stufe II
+  fr: Audit de réemploi niveau II
+  it: Audit di riuso livello II
+  en: Reuse audit stage II
+label:
+  de: Audit Stufe II
+  fr: Audit niveau II
+  it: Audit livello II
+  en: Audit stage II
+short:
+  de: Stufe II
+  fr: Niveau II
+  it: Livello II
+  en: Stage II
+entity: component
+requirements:
+- information:
+    de: Projektname
+    fr: Nom du projet
+    it: Nome del progetto
+    en: Project name
+  obligation: muss
+  entity: project
+  fields:
+  - projectName
+- information:
+    de: Eigentümerin, Auftraggeberin und Auftragnehmerin
+    fr: Propriétaire, mandant et mandataire
+    it: Proprietario, committente e mandatario
+    en: Owner, client and auditor
+  obligation: muss
+  entity: project
+  fields:
+  - projectOwner
+  - projectAuditClient
+  - projectAuditor
+- information:
+    de: Adresse des Quellobjekts
+    fr: Adresse du bâtiment source
+    it: Indirizzo dell'edificio di origine
+    en: Address of the donor building
+  obligation: muss
+  entity: donorBuilding
+  fields:
+  - donorBuildingStreet
+  - donorBuildingHouseNumber
+  - donorBuildingPostalCode
+  - donorBuildingCity
+- information:
+    de: Land des Quellobjekts
+    fr: Pays du bâtiment source
+    it: Paese dell'edificio di origine
+    en: Country of the donor building
+  obligation: sollte
+  entity: donorBuilding
+  fields:
+  - donorBuildingCountry
+- information:
+    de: Gebäudedaten nach GWR und Bauweise
+    fr: Données du bâtiment selon le RegBL et mode de construction
+    it: Dati dell'edificio secondo il REA e tipo di costruzione
+    en: Building data according to the RBD and construction type
+  obligation: sollte
+  entity: donorBuilding
+  fields:
+  - donorBuildingGklas
+  - donorBuildingGkat
+  - donorBuildingGbaup
+  - donorBuildingConstructionType
+  - donorBuildingGbauj
+  - donorBuildingGvol
+  - donorBuildingGarea
+  - donorBuildingGastw
+- information:
+    de: EGID und EGRID
+    fr: EGID et EGRID
+    it: EGID e EGRID
+    en: EGID and EGRID
+  obligation: muss
+  entity: donorBuilding
+  fields:
+  - donorBuildingEgid
+  - donorBuildingEgrid
+- information:
+    de: Erschliessung
+    fr: Accès
+    it: Accesso
+    en: Access
+  obligation: muss
+  entity: donorBuilding
+  fields:
+  - donorBuildingAccess
+- information:
+    de: Kurze Bezeichnung
+    fr: Désignation courte
+    it: Denominazione breve
+    en: Short name
+  obligation: muss
+  fields:
+  - name
+- information:
+    de: Bauteil-ID
+    fr: ID de l'élément
+    it: ID del componente
+    en: Component ID
+  obligation: muss
+  fields:
+  - componentId
+- information:
+    de: eBKP-H
+    fr: eCCC-Bât
+    it: eCCC-E
+    en: eBKP-H
+  obligation: muss
+  fields:
+  - ebkphCode
+  - ebkphLabel
+- information:
+    de: Verortung im Quellobjekt
+    fr: Localisation dans le bâtiment source
+    it: Ubicazione nell'edificio di origine
+    en: Position in donor building
+  obligation: sollte
+  fields:
+  - positionInDonorBuilding
+- information:
+    de: Präzise Mengenangabe
+    fr: Indication précise de la quantité
+    it: Indicazione precisa della quantità
+    en: Precise quantity
+  obligation: muss
+  fields:
+  - quantityMin
+  - quantityMax
+  - unit
+- information:
+    de: Aussenmasse des Bauteils oder relevante kategoriespezifische Dimensionen
+    fr: Dimensions extérieures de l'élément ou dimensions pertinentes propres à la catégorie
+    it: Dimensioni esterne del componente o dimensioni rilevanti specifiche della categoria
+    en: Outer dimensions of the component or relevant category-specific dimensions
+  obligation: muss
+  fields:
+  - zDim
+  - yDim
+  - xDim
+  - dimensionNotes
+- information:
+    de: Mindestens eine Materialkategorie
+    fr: Au moins une catégorie de matériau
+    it: Almeno una categoria di materiale
+    en: At least one material category
+  obligation: muss
+  fields:
+  - material
+- information:
+    de: Weitere Materialangaben
+    fr: Autres indications sur le matériau
+    it: Ulteriori indicazioni sul materiale
+    en: Further material details
+  obligation: muss
+  fields:
+  - materialNotes
+- information:
+    de: Weitere Informationen
+    fr: Informations complémentaires
+    it: Ulteriori informazioni
+    en: Further information
+  obligation: sollte
+  fields:
+  - description
+- information:
+    de: Verweis auf Schadstoffgutachten
+    fr: Renvoi au diagnostic polluants
+    it: Rimando alla perizia sulle sostanze nocive
+    en: Reference to pollutant report
+  obligation: muss
+  fields:
+  - pollutantReport
+- information:
+    de: Bewertung des Zustands
+    fr: Évaluation de l'état
+    it: Valutazione dello stato
+    en: Assessment of condition
+  obligation: muss
+  fields:
+  - visualCondition
+  - functionalCondition
+- information:
+    de: Einschätzung des Demontageaufwands
+    fr: Estimation de l'effort de démontage
+    it: Stima dell'onere di smontaggio
+    en: Estimate of dismantling effort
+  obligation: muss
+  fields:
+  - demountability
+- information:
+    de: Empfehlung für oder gegen eine Vermittlung
+    fr: Recommandation pour ou contre un placement
+    it: Raccomandazione a favore o contro il collocamento
+    en: Recommendation for or against placement
+  obligation: muss
+  fields:
+  - recDistribution
+- information:
+    de: Begründung der Empfehlung
+    fr: Justification de la recommandation
+    it: Motivazione della raccomandazione
+    en: Reasons for the recommendation
+  obligation: sollte
+  fields:
+  - recNotes
+- information:
+    de: Titelfoto des Bauteils
+    fr: Photo principale de l'élément
+    it: Foto principale del componente
+    en: Main photo of the component
+  obligation: muss
+  fields: []
+  attachment: true
+- information:
+    de: Mindestens zwei weitere Übersichts- oder Detailfotos
+    fr: Au moins deux autres photos d'ensemble ou de détail
+    it: Almeno altre due foto d'insieme o di dettaglio
+    en: At least two further overview or detail photos
+  obligation: sollte
+  fields: []
+  attachment: true

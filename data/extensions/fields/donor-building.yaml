@@ -1,0 +1,87 @@
+# Erweiterung: wächst über Vorschläge (siehe CONTRIBUTING.md). Nur ergänzen, nie umbenennen oder löschen.
+entity: donorBuilding
+title:
+  de: Quellobjekte
+  fr: Bâtiments sources
+  it: Edifici di origine
+  en: Donor buildings
+layer: extension
+fields:
+- key: donorBuildingSpecialEvents
+  label:
+    de: Aussergewöhnliche Einzelereignisse
+    fr: Événements exceptionnels
+    it: Eventi straordinari
+    en: Exceptional events
+  group: details
+  format: multiline
+  definition:
+    de: Aussergewöhnliche Ereignisse, die den Zustand der Bauteile beeinflusst haben können, zum Beispiel Brand, Wasserschaden oder längerer Leerstand
+    fr: Événements exceptionnels ayant pu influencer l'état des éléments, par exemple incendie, dégât d'eau ou vacance prolongée
+    it: Eventi straordinari che possono aver influito sullo stato dei componenti, ad esempio incendio, danni da acqua o lunga inoccupazione
+    en: Exceptional events that may have affected the condition of the components, for example fire, water damage or a long vacancy
+- key: donorBuildingConstructionDate
+  label:
+    de: Baudatum
+    fr: Date de construction
+    it: Data di costruzione
+    en: Construction date
+  group: buildingData
+  format: date
+  definition:
+    de: Datum der Fertigstellung des Gebäudes, sofern genauer bekannt als das Baujahr
+    fr: Date d'achèvement du bâtiment, si elle est connue plus précisément que l'année de construction
+    it: Data di completamento dell'edificio, se nota con maggiore precisione rispetto all'anno di costruzione
+    en: Date of completion of the building, where known more precisely than the year of construction
+- key: donorBuildingLastRenovationYear
+  label:
+    de: Jahr der letzten Umbaumassnahme
+    fr: Année de la dernière transformation
+    it: Anno dell'ultima trasformazione
+    en: Year of last renovation
+  group: details
+  format: year
+  definition:
+    de: Jahr, in dem das Gebäude zuletzt umgebaut oder saniert wurde
+    fr: Année de la dernière transformation ou rénovation du bâtiment
+    it: Anno dell'ultima trasformazione o dell'ultimo risanamento dell'edificio
+    en: Year in which the building was last converted or refurbished
+- key: donorBuildingDismantlingStartDate
+  label:
+    de: Ausbau von
+    fr: Démontage dès le
+    it: Smontaggio dal
+    en: Dismantling from
+  group: details
+  format: date
+  definition:
+    de: Datum, ab dem Bauteile im Quellobjekt ausgebaut werden können
+    fr: Date à partir de laquelle les éléments peuvent être démontés dans le bâtiment source
+    it: Data a partire dalla quale i componenti possono essere smontati nell'edificio di origine
+    en: Date from which components can be dismantled in the donor building
+- key: donorBuildingDismantlingEndDate
+  label:
+    de: Ausbau bis
+    fr: Démontage jusqu'au
+    it: Smontaggio fino al
+    en: Dismantling until
+  group: details
+  format: date
+  definition:
+    de: Datum, bis zu dem der Ausbau der Bauteile abgeschlossen sein muss
+    fr: Date à laquelle le démontage des éléments doit être terminé
+    it: Data entro la quale lo smontaggio dei componenti deve essere concluso
+    en: Date by which dismantling of the components must be completed
+- key: donorBuildingAttachments
+  label:
+    de: Anhänge
+    fr: Annexes
+    it: Allegati
+    en: Attachments
+  group: details
+  format: multiline
+  definition:
+    de: Bezeichnung und Ablageort von Unterlagen zum Quellobjekt, zum Beispiel Pläne oder Schadstoffgutachten
+    fr: Désignation et emplacement des documents relatifs au bâtiment source, par exemple plans ou diagnostic polluants
+    it: Denominazione e ubicazione dei documenti relativi all'edificio di origine, ad esempio piani o perizia sulle sostanze nocive
+    en: Name and storage location of documents on the donor building, for example plans or the pollutant report

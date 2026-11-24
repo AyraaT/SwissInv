@@ -1,0 +1,468 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Swiss Inv reuse component",
+  "version": "2.0.0-draft",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "Short name"
+    },
+    "componentId": {
+      "type": "string",
+      "title": "Component ID",
+      "description": "Number identifying the DPP; format and assignment of the ID are not prescribed by Swiss Inv"
+    },
+    "ebkphCode": {
+      "type": "string",
+      "title": "eBKP-H code",
+      "description": "According to eBKP-H SN 506 511; code and label are to be given in separate data fields; a selection of possible codes is listed in the eBKP-H reference table"
+    },
+    "ebkphLabel": {
+      "type": "string",
+      "title": "eBKP-H label",
+      "description": "Label belonging to the eBKP-H code; code and label are to be given in separate data fields"
+    },
+    "positionInDonorBuilding": {
+      "type": "string",
+      "title": "Position in donor building",
+      "description": "Description of the position in the donor building, for example floor, room, etc."
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "title": "UUID",
+      "description": "according to ISO/IEC 9834-8:2014; ensures globally unique identification"
+    },
+    "parentUuid": {
+      "type": "string",
+      "format": "uuid",
+      "title": "UUID of the master item",
+      "description": "Indicates that the component belongs to a higher-level overall item"
+    },
+    "ebkpGateCode": {
+      "type": "string",
+      "title": "eBKP-Gate code",
+      "description": "According to eBKP-Gate; code and label are to be given in separate data fields"
+    },
+    "ebkpGateLabel": {
+      "type": "string",
+      "title": "eBKP-Gate label",
+      "description": "Label belonging to the eBKP-Gate code; code and label are to be given in separate data fields"
+    },
+    "quantityMin": {
+      "type": "number",
+      "title": "Quantity (min)",
+      "description": "The quantity may deliberately be given as a range with a lower and an upper limit; for a precise figure enter the same value in both fields"
+    },
+    "quantityMax": {
+      "type": "number",
+      "title": "Quantity (max)",
+      "description": "The quantity may deliberately be given as a range with a lower and an upper limit; for a precise figure enter the same value in both fields"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "pc",
+        "m",
+        "m2",
+        "m3",
+        "kg",
+        "t",
+        "na"
+      ],
+      "title": "Unit",
+      "description": "A unit suitable for placing the components with takers is recommended"
+    },
+    "quantityNotes": {
+      "type": "string",
+      "title": "Quantity notes",
+      "description": "Additional information on the quantity, for example further reference quantities"
+    },
+    "zDim": {
+      "type": "number",
+      "title": "Outer dimension height",
+      "description": "The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard"
+    },
+    "yDim": {
+      "type": "number",
+      "title": "Outer dimension width",
+      "description": "The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard"
+    },
+    "xDim": {
+      "type": "number",
+      "title": "Outer dimension depth / length",
+      "description": "The three outer dimensions are intended to standardise how dimensions are given for as many component shapes as possible; they follow the bounding box of the buildingSMART IFC standard"
+    },
+    "dimensionNotes": {
+      "type": "string",
+      "title": "Free dimension details",
+      "description": "Relevant dimensions not covered by the outer dimensions or other attributes"
+    },
+    "description": {
+      "type": "string",
+      "title": "Further information",
+      "description": "Description of relevant properties not covered by the outer dimensions or other attributes"
+    },
+    "material": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "me00",
+          "me01",
+          "me02",
+          "me03",
+          "on00",
+          "on01",
+          "on02",
+          "os01",
+          "os02",
+          "mi00",
+          "mi01",
+          "mi02",
+          "mi03",
+          "mi04",
+          "mi05",
+          "mi06",
+          "co01",
+          "un01"
+        ]
+      },
+      "title": "Material category",
+      "description": "Material categories the component mainly consists of; several can be chosen, for example solid wood for the frame and glass for the glazing of a timber window"
+    },
+    "materialNotes": {
+      "type": "string",
+      "title": "Material notes",
+      "description": "Details on the material not covered by the material category"
+    },
+    "pollutantReport": {
+      "type": "string",
+      "enum": [
+        "available",
+        "notAvailable"
+      ],
+      "title": "Pollutant report",
+      "description": "States whether an assessment of contamination by a pollutant report exists for the component"
+    },
+    "visualCondition": {
+      "type": "string",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "title": "Visual condition",
+      "description": "Any remarks on the visual condition can be added in the data field «Explanation of the recommendation»"
+    },
+    "functionalCondition": {
+      "type": "string",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "title": "Functional condition",
+      "description": "Any remarks on the functional condition can be added in the data field «Explanation of the recommendation»"
+    },
+    "demountability": {
+      "type": "string",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "title": "Dismantling effort",
+      "description": "Any remarks on the dismantling effort can be added in the data field «Explanation of the recommendation»"
+    },
+    "recDetailedAssessment": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "yes",
+        "no"
+      ],
+      "title": "Recommendation detailed survey",
+      "description": "The auditor of the reuse audit stage I recommends whether an in-depth survey of the component should be carried out in the reuse audit stage II"
+    },
+    "recDistribution": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "yes",
+        "no"
+      ],
+      "title": "Recommendation placement",
+      "description": "The auditor of the reuse audit stage II recommends whether placement of the component should be sought"
+    },
+    "recNotes": {
+      "type": "string",
+      "title": "Explanation of the recommendation",
+      "description": "Any remarks on the assessment and on the recommendation to place the component"
+    },
+    "pollutantNotes": {
+      "type": "string",
+      "title": "Pollutant notes",
+      "description": "Further details on the pollutant report, for example author, date, and type and degree of contamination"
+    },
+    "connection": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "unknown",
+          "screwed",
+          "nailed",
+          "glued",
+          "welded",
+          "riveted",
+          "interlocked",
+          "plugged",
+          "clamped",
+          "clipped",
+          "flanged",
+          "dowelled",
+          "soldered",
+          "other"
+        ]
+      },
+      "title": "Connection type",
+      "description": "All connections relevant to dismantling or installing the component; additional information not covered by the selection list can be added as free text in the data field «Connection notes»"
+    },
+    "connectionNotes": {
+      "type": "string",
+      "title": "Connection notes",
+      "description": "Additional information on the connection not covered by the selection list"
+    },
+    "reUseStatus": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "installedInDonorBuilding",
+        "demounted",
+        "stored",
+        "reused",
+        "retainedInPlace",
+        "noReuse"
+      ],
+      "title": "Reuse status",
+      "description": "Current state of the component in the reuse process"
+    },
+    "locationPostalCode": {
+      "type": "string",
+      "title": "Postal code of location",
+      "description": "Postal code of the current location of the component"
+    },
+    "locationCountry": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "title": "Country of location",
+      "description": "Country of the current location of the component as a two-letter country code according to ISO 3166-1 (e.g. CH)"
+    },
+    "storageStartDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Storage start date",
+      "description": "Date on which the component was put into storage"
+    },
+    "storageEndDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Storage end date",
+      "description": "Date on which the component left storage or must leave it at the latest"
+    },
+    "logisticsNotes": {
+      "type": "string",
+      "title": "Logistics notes",
+      "description": "Additional information on storage, packaging and transport of the component"
+    },
+    "availabilityStartDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Availability start date",
+      "description": "Date from which the component is available to takers"
+    },
+    "availabilityEndDate": {
+      "type": "string",
+      "format": "date",
+      "title": "Availability end date",
+      "description": "Date until which the component is available to takers"
+    },
+    "price": {
+      "type": "number",
+      "title": "Selling price",
+      "description": "Selling price in Swiss francs per unit chosen for the quantity"
+    },
+    "handoverConditions": {
+      "type": "string",
+      "title": "Handover conditions",
+      "description": "Terms of handover, for example collection from the donor building or warehouse, dismantling by the taker, deadlines"
+    },
+    "emissionSavingsPerUnit": {
+      "type": "number",
+      "title": "GHG savings per unit",
+      "description": "According to KBOB; the approximate GHG savings from reusing the component compared with new production; the method should be described in the data field «Life cycle assessment notes»"
+    },
+    "emissionSavings": {
+      "type": "number",
+      "title": "GHG savings",
+      "description": "Total GHG savings for the quantity given; method as for «GHG savings per unit»"
+    },
+    "emissionNotes": {
+      "type": "string",
+      "title": "Life cycle assessment notes",
+      "description": "Remarks on the GHG balance or details of further climate and environmental indicators"
+    },
+    "manufacturer": {
+      "type": "string",
+      "title": "Manufacturer",
+      "description": "Name of the company that manufactured the component"
+    },
+    "productName": {
+      "type": "string",
+      "title": "Product name",
+      "description": "Full product name or brand name of the component"
+    },
+    "yearOfInstallation": {
+      "type": "string",
+      "pattern": "^\\d{4}$",
+      "title": "Year of installation",
+      "description": "Year in which the component was installed in the donor building"
+    },
+    "yearOfManufacture": {
+      "type": "string",
+      "pattern": "^\\d{4}$",
+      "title": "Year of manufacture",
+      "description": "Year in which the component was manufactured"
+    },
+    "color": {
+      "type": "string",
+      "title": "Colour",
+      "description": "Relevant colours of the component"
+    },
+    "weight": {
+      "type": "number",
+      "title": "Weight",
+      "description": "Weight per unit chosen for the quantity"
+    },
+    "weatheringExposure": {
+      "type": "string",
+      "title": "Weathering exposure",
+      "description": "States whether and how strongly the component was exposed to the weather, for example indoors, outdoors sheltered, outdoors fully exposed"
+    },
+    "zoneInDonorBuilding": {
+      "type": "string",
+      "title": "Zone in building",
+      "description": "Zone or area of the donor building to which the component is assigned"
+    },
+    "materialKbob": {
+      "type": "string",
+      "title": "Material according to KBOB",
+      "description": "Materials of the component according to the KBOB list, with their respective shares"
+    },
+    "colorInHex": {
+      "type": "string",
+      "title": "Colour as HEX",
+      "description": "Colour of the component as a hexadecimal value, for example #A0522D"
+    },
+    "warranty": {
+      "type": "string",
+      "title": "Warranty",
+      "description": "Details of any warranty or guarantee given on the reused component"
+    },
+    "priceOriginal": {
+      "type": "number",
+      "title": "Original price",
+      "description": "Price of the component when new, in Swiss francs, where known"
+    },
+    "defects": {
+      "type": "string",
+      "title": "Defects",
+      "description": "Known defects of or damage to the component"
+    },
+    "uValue": {
+      "type": "number",
+      "title": "U-value",
+      "description": "Thermal transmittance of the component according to the manufacturer or a measurement"
+    },
+    "volumeInLiters": {
+      "type": "number",
+      "title": "Usable volume in litres",
+      "description": "Usable volume of the component in litres, for example for tanks or basins"
+    },
+    "volumeInM3": {
+      "type": "number",
+      "title": "Usable volume in cubic metres",
+      "description": "Usable volume of the component in cubic metres, for example for containers or silos"
+    },
+    "electricConnector": {
+      "type": "string",
+      "title": "Electrical connection",
+      "description": "Type of electrical connection, for example plug type or fixed connection"
+    },
+    "electricVoltage": {
+      "type": "number",
+      "title": "Voltage",
+      "description": "Rated voltage of the component"
+    },
+    "electricWatt": {
+      "type": "number",
+      "title": "Electrical power",
+      "description": "Rated power of the component"
+    },
+    "electricAmp": {
+      "type": "number",
+      "title": "Current",
+      "description": "Rated current of the component"
+    },
+    "kitchenNorm": {
+      "type": "string",
+      "title": "Kitchen standard",
+      "description": "Dimensional standard to which kitchen units are built, for example SMS (55 cm) or EURO (60 cm)"
+    },
+    "holeSpacing": {
+      "type": "number",
+      "title": "Hole spacing",
+      "description": "Distance between fixing or connection holes, measured centre to centre"
+    },
+    "activeOnPlatform": {
+      "type": "boolean",
+      "title": "Active on platform",
+      "description": "States whether the component is visible on the placement platform"
+    },
+    "topOfferOnPlatform": {
+      "type": "boolean",
+      "title": "Top offer on platform",
+      "description": "States whether the component is featured on the platform"
+    },
+    "paymentMethod": {
+      "type": "string",
+      "title": "Payment method",
+      "description": "Accepted payment methods, for example invoice or advance payment"
+    },
+    "shippingMethod": {
+      "type": "string",
+      "title": "Shipping method",
+      "description": "Possible ways of handover or delivery, for example collection or haulier"
+    },
+    "reservedStock": {
+      "type": "number",
+      "title": "Reserved stock",
+      "description": "Quantity already reserved for takers, in the chosen unit"
+    }
+  },
+  "additionalProperties": true
+}

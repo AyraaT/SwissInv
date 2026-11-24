@@ -1,0 +1,649 @@
+# Erweiterung: wächst über Vorschläge (siehe CONTRIBUTING.md). Nur ergänzen, nie umbenennen oder löschen.
+entity: component
+title:
+  de: Re-Use-Bauteile
+  fr: Éléments de réemploi
+  it: Componenti di riuso
+  en: Reuse components
+layer: extension
+fields:
+- key: uuid
+  label:
+    de: UUID
+    fr: UUID
+    it: UUID
+    en: UUID
+  group: identification
+  format: uuid
+  definition:
+    de: nach ISO/IEC 9834-8:2014; gewährleistet die weltweit eindeutige Identifikation
+    fr: selon ISO/IEC 9834-8:2014; garantit une identification unique au niveau mondial
+    it: secondo ISO/IEC 9834-8:2014; garantisce l'identificazione univoca a livello mondiale
+    en: according to ISO/IEC 9834-8:2014; ensures globally unique identification
+- key: parentUuid
+  label:
+    de: UUID der Masterposition
+    fr: UUID de la position principale
+    it: UUID della posizione principale
+    en: UUID of the master item
+  group: identification
+  format: uuid
+  definition:
+    de: Zeigt die Zugehörigkeit zu einer übergeordneten Gesamtposition
+    fr: Indique l'appartenance à une position globale supérieure
+    it: Indica l'appartenenza a una posizione complessiva sovraordinata
+    en: Indicates that the component belongs to a higher-level overall item
+- key: ebkpGateCode
+  label:
+    de: eBKP-Gate Code
+    fr: Code eBKP-Gate
+    it: Codice eBKP-Gate
+    en: eBKP-Gate code
+  group: identification
+  format: code
+  list: ebkp-gate
+  definition:
+    de: Nach eBKP-Gate; Code und Bezeichnung sind in getrennten Datenfeldern abzubilden
+    fr: Selon eBKP-Gate; le code et la désignation doivent figurer dans des champs séparés
+    it: Secondo eBKP-Gate; codice e denominazione vanno indicati in campi separati
+    en: According to eBKP-Gate; code and label are to be given in separate data fields
+- key: ebkpGateLabel
+  label:
+    de: eBKP-Gate Bezeichnung
+    fr: Désignation eBKP-Gate
+    it: Denominazione eBKP-Gate
+    en: eBKP-Gate label
+  group: identification
+  format: text
+  definition:
+    de: Bezeichnung zum eBKP-Gate Code; Code und Bezeichnung sind in getrennten Datenfeldern abzubilden
+    fr: Désignation correspondant au code eBKP-Gate; le code et la désignation doivent figurer dans des champs séparés
+    it: Denominazione corrispondente al codice eBKP-Gate; codice e denominazione vanno indicati in campi separati
+    en: Label belonging to the eBKP-Gate code; code and label are to be given in separate data fields
+- key: quantityNotes
+  label:
+    de: Zusatzinformation Menge
+    fr: Informations complémentaires sur la quantité
+    it: Informazioni supplementari sulla quantità
+    en: Quantity notes
+  group: quantity
+  format: multiline
+  definition:
+    de: Zusatzinformationen zur Menge, zum Beispiel weitere Bezugsgrössen
+    fr: Informations complémentaires sur la quantité, par exemple d'autres grandeurs de référence
+    it: Informazioni supplementari sulla quantità, ad esempio altre grandezze di riferimento
+    en: Additional information on the quantity, for example further reference quantities
+- key: pollutantNotes
+  label:
+    de: Zusatzinformation Schadstoffe
+    fr: Informations complémentaires sur les polluants
+    it: Informazioni supplementari sulle sostanze nocive
+    en: Pollutant notes
+  group: assessment
+  format: multiline
+  definition:
+    de: Weiterführende Angaben zum Schadstoffgutachten, zum Beispiel Verfasserin, Datum sowie Art und Grad der Schadstoffbelastung
+    fr: Indications complémentaires sur le diagnostic polluants, par exemple auteur, date ainsi que type et degré de pollution
+    it: Indicazioni supplementari sulla perizia, ad esempio autore, data nonché tipo e grado di contaminazione
+    en: Further details on the pollutant report, for example author, date, and type and degree of contamination
+- key: connection
+  label:
+    de: Verbindungsart
+    fr: Type d'assemblage
+    it: Tipo di collegamento
+    en: Connection type
+  group: assessment
+  format: code
+  list: connection
+  multiple: true
+  definition:
+    de: Gemeint sind alle Verbindungen, die für eine Demontage oder Montage des Bauteils relevant sind; zusätzliche Informationen, welche nicht durch die Auswahlliste abgedeckt sind, können im Datenfeld «Zusatzinformation Verbindungsart» als Freitext ergänzt werden
+    fr: Sont visés tous les assemblages pertinents pour le démontage ou le montage de l'élément; les informations supplémentaires non couvertes par la liste de sélection peuvent être ajoutées en texte libre dans le champ «Informations complémentaires sur le type d'assemblage»
+    it: Si intendono tutti i collegamenti rilevanti per lo smontaggio o il montaggio del componente; le informazioni supplementari non coperte dall'elenco di selezione possono essere aggiunte come testo libero nel campo «Informazioni supplementari sul tipo di collegamento»
+    en: All connections relevant to dismantling or installing the component; additional information not covered by the selection list can be added as free text in the data field «Connection notes»
+- key: connectionNotes
+  label:
+    de: Zusatzinformation Verbindungsart
+    fr: Informations complémentaires sur le type d'assemblage
+    it: Informazioni supplementari sul tipo di collegamento
+    en: Connection notes
+  group: assessment
+  format: multiline
+  definition:
+    de: Zusätzliche Informationen zur Verbindung, welche nicht durch die Auswahlliste abgedeckt sind
+    fr: Informations supplémentaires sur l'assemblage qui ne sont pas couvertes par la liste de sélection
+    it: Informazioni supplementari sul collegamento non coperte dall'elenco di selezione
+    en: Additional information on the connection not covered by the selection list
+- key: reUseStatus
+  label:
+    de: Re-Use-Status
+    fr: Statut de réemploi
+    it: Stato di riuso
+    en: Reuse status
+  group: logistics
+  format: code
+  list: reuse-status
+  definition:
+    de: Aktueller Stand des Bauteils im Wiederverwendungsprozess
+    fr: État actuel de l'élément dans le processus de réemploi
+    it: Stato attuale del componente nel processo di riuso
+    en: Current state of the component in the reuse process
+- key: locationPostalCode
+  label:
+    de: Postleitzahl des Standorts
+    fr: Code postal du lieu
+    it: Codice postale dell'ubicazione
+    en: Postal code of location
+  group: logistics
+  format: postalCode
+  definition:
+    de: Postleitzahl des aktuellen Standorts des Bauteils
+    fr: Code postal de l'emplacement actuel de l'élément
+    it: Codice postale dell'ubicazione attuale del componente
+    en: Postal code of the current location of the component
+- key: locationCountry
+  label:
+    de: Land des Standorts
+    fr: Pays du lieu
+    it: Paese dell'ubicazione
+    en: Country of location
+  group: logistics
+  format: country
+  definition:
+    de: Land des aktuellen Standorts des Bauteils als zweistelliger Ländercode nach ISO 3166-1 (z. B. CH)
+    fr: Pays de l'emplacement actuel de l'élément sous forme de code pays à deux lettres selon ISO 3166-1 (p. ex. CH)
+    it: Paese dell'ubicazione attuale del componente come codice paese a due lettere secondo ISO 3166-1 (ad es. CH)
+    en: Country of the current location of the component as a two-letter country code according to ISO 3166-1 (e.g. CH)
+- key: storageStartDate
+  label:
+    de: Datum Einlagerung
+    fr: Date d'entrée en stock
+    it: Data di entrata a magazzino
+    en: Storage start date
+  group: logistics
+  format: date
+  definition:
+    de: Datum, an dem das Bauteil eingelagert wurde
+    fr: Date à laquelle l'élément a été mis en stock
+    it: Data in cui il componente è stato immagazzinato
+    en: Date on which the component was put into storage
+- key: storageEndDate
+  label:
+    de: Datum Auslagerung
+    fr: Date de sortie de stock
+    it: Data di uscita dal magazzino
+    en: Storage end date
+  group: logistics
+  format: date
+  definition:
+    de: Datum, an dem das Bauteil ausgelagert wurde oder spätestens ausgelagert werden muss
+    fr: Date à laquelle l'élément a quitté le stock ou doit le quitter au plus tard
+    it: Data in cui il componente è uscito dal magazzino o deve uscirne al più tardi
+    en: Date on which the component left storage or must leave it at the latest
+- key: logisticsNotes
+  label:
+    de: Zusatzinformation Logistik
+    fr: Informations complémentaires sur la logistique
+    it: Informazioni supplementari sulla logistica
+    en: Logistics notes
+  group: logistics
+  format: multiline
+  definition:
+    de: Zusatzinformationen zu Lagerung, Verpackung und Transport des Bauteils
+    fr: Informations complémentaires sur le stockage, l'emballage et le transport de l'élément
+    it: Informazioni supplementari su stoccaggio, imballaggio e trasporto del componente
+    en: Additional information on storage, packaging and transport of the component
+- key: availabilityStartDate
+  label:
+    de: Startdatum Verfügbarkeit
+    fr: Date de début de disponibilité
+    it: Data di inizio disponibilità
+    en: Availability start date
+  group: conditions
+  format: date
+  definition:
+    de: Datum, ab dem das Bauteil für Abnehmerinnen verfügbar ist
+    fr: Date à partir de laquelle l'élément est disponible pour les repreneurs
+    it: Data a partire dalla quale il componente è disponibile per gli acquirenti
+    en: Date from which the component is available to takers
+- key: availabilityEndDate
+  label:
+    de: Enddatum Verfügbarkeit
+    fr: Date de fin de disponibilité
+    it: Data di fine disponibilità
+    en: Availability end date
+  group: conditions
+  format: date
+  definition:
+    de: Datum, bis zu dem das Bauteil für Abnehmerinnen verfügbar ist
+    fr: Date jusqu'à laquelle l'élément est disponible pour les repreneurs
+    it: Data fino alla quale il componente è disponibile per gli acquirenti
+    en: Date until which the component is available to takers
+- key: price
+  label:
+    de: Verkaufspreis
+    fr: Prix de vente
+    it: Prezzo di vendita
+    en: Selling price
+  group: conditions
+  format: number
+  unit: CHF
+  definition:
+    de: Verkaufspreis in Schweizer Franken pro Einheit, welche für die Mengenangabe gewählt wurde
+    fr: Prix de vente en francs suisses par unité choisie pour l'indication de la quantité
+    it: Prezzo di vendita in franchi svizzeri per unità scelta per l'indicazione della quantità
+    en: Selling price in Swiss francs per unit chosen for the quantity
+- key: handoverConditions
+  label:
+    de: Übergabekonditionen
+    fr: Conditions de remise
+    it: Condizioni di consegna
+    en: Handover conditions
+  group: conditions
+  format: multiline
+  definition:
+    de: Bedingungen der Übergabe, zum Beispiel Abholung ab Quellobjekt oder Lager, Demontage durch die Abnehmerin, Fristen
+    fr: Conditions de remise, par exemple retrait au bâtiment source ou au dépôt, démontage par le repreneur, délais
+    it: Condizioni di consegna, ad esempio ritiro presso l'edificio di origine o il magazzino, smontaggio a cura dell'acquirente, termini
+    en: Terms of handover, for example collection from the donor building or warehouse, dismantling by the taker, deadlines
+- key: emissionSavingsPerUnit
+  label:
+    de: THG-Einsparung pro Einheit
+    fr: Économie de GES par unité
+    it: Risparmio di gas serra per unità
+    en: GHG savings per unit
+  group: analysis
+  format: number
+  unit: kg CO₂-eq
+  definition:
+    de: Nach KBOB; gemeint ist die überschlägige THG-Einsparung durch die Wiederverwendung des Bauteils im Vergleich zur Neuherstellung; im Datenfeld «Zusatzinformation Ökobilanz» sollte die Methode beschrieben werden
+    fr: Selon KBOB; il s'agit de l'économie approximative de GES réalisée grâce au réemploi de l'élément par rapport à une fabrication neuve; la méthode devrait être décrite dans le champ «Informations complémentaires sur l'écobilan»
+    it: Secondo KBOB; si intende il risparmio approssimativo di gas serra ottenuto con il riuso del componente rispetto a una nuova produzione; il metodo andrebbe descritto nel campo «Informazioni supplementari sull'ecobilancio»
+    en: According to KBOB; the approximate GHG savings from reusing the component compared with new production; the method should be described in the data field «Life cycle assessment notes»
+- key: emissionSavings
+  label:
+    de: THG-Einsparung
+    fr: Économie de GES
+    it: Risparmio di gas serra
+    en: GHG savings
+  group: analysis
+  format: number
+  unit: kg CO₂-eq
+  definition:
+    de: Gesamte THG-Einsparung für die angegebene Menge; Methode wie bei «THG-Einsparung pro Einheit»
+    fr: Économie totale de GES pour la quantité indiquée; méthode identique à «Économie de GES par unité»
+    it: Risparmio totale di gas serra per la quantità indicata; metodo come per «Risparmio di gas serra per unità»
+    en: Total GHG savings for the quantity given; method as for «GHG savings per unit»
+- key: emissionNotes
+  label:
+    de: Zusatzinformation Ökobilanz
+    fr: Informations complémentaires sur l'écobilan
+    it: Informazioni supplementari sull'ecobilancio
+    en: Life cycle assessment notes
+  group: analysis
+  format: multiline
+  definition:
+    de: Ausführungen zur THG-Bilanz oder Angaben zu weiteren Klima- und Umweltindikatoren
+    fr: Précisions sur le bilan de GES ou indications sur d'autres indicateurs climatiques et environnementaux
+    it: Precisazioni sul bilancio dei gas serra o indicazioni su altri indicatori climatici e ambientali
+    en: Remarks on the GHG balance or details of further climate and environmental indicators
+- key: manufacturer
+  label:
+    de: Herstellerin
+    fr: Fabricant
+    it: Fabbricante
+    en: Manufacturer
+  group: furtherAttributes
+  format: text
+  definition:
+    de: Name des Unternehmens, welches das Bauteil hergestellt hat
+    fr: Nom de l'entreprise qui a fabriqué l'élément
+    it: Nome dell'impresa che ha fabbricato il componente
+    en: Name of the company that manufactured the component
+- key: productName
+  label:
+    de: Produktbezeichnung
+    fr: Désignation du produit
+    it: Denominazione del prodotto
+    en: Product name
+  group: furtherAttributes
+  format: text
+  definition:
+    de: Vollständige Produktbezeichnung bzw. Markenname des Bauteils
+    fr: Désignation complète du produit ou nom de marque de l'élément
+    it: Denominazione completa del prodotto o nome commerciale del componente
+    en: Full product name or brand name of the component
+- key: yearOfInstallation
+  label:
+    de: Einbaujahr
+    fr: Année de pose
+    it: Anno di posa
+    en: Year of installation
+  group: furtherAttributes
+  format: year
+  definition:
+    de: Jahr, in welchem das Bauteil im Quellobjekt eingebaut wurde
+    fr: Année au cours de laquelle l'élément a été posé dans le bâtiment source
+    it: Anno in cui il componente è stato posato nell'edificio di origine
+    en: Year in which the component was installed in the donor building
+- key: yearOfManufacture
+  label:
+    de: Produktionsjahr
+    fr: Année de fabrication
+    it: Anno di fabbricazione
+    en: Year of manufacture
+  group: furtherAttributes
+  format: year
+  definition:
+    de: Jahr, in welchem das Bauteil hergestellt wurde
+    fr: Année au cours de laquelle l'élément a été fabriqué
+    it: Anno in cui il componente è stato fabbricato
+    en: Year in which the component was manufactured
+- key: color
+  label:
+    de: Farbe
+    fr: Couleur
+    it: Colore
+    en: Colour
+  group: furtherAttributes
+  format: text
+  definition:
+    de: Relevante Farben des Bauteils
+    fr: Couleurs pertinentes de l'élément
+    it: Colori rilevanti del componente
+    en: Relevant colours of the component
+- key: weight
+  label:
+    de: Gewicht
+    fr: Poids
+    it: Peso
+    en: Weight
+  group: furtherAttributes
+  format: number
+  unit: kg
+  definition:
+    de: Gewichtsangabe pro Einheit, welche für die Mengenangabe gewählt wurde
+    fr: Poids par unité choisie pour l'indication de la quantité
+    it: Peso per unità scelta per l'indicazione della quantità
+    en: Weight per unit chosen for the quantity
+- key: weatheringExposure
+  label:
+    de: Bewitterung
+    fr: Exposition aux intempéries
+    it: Esposizione alle intemperie
+    en: Weathering exposure
+  group: furtherAttributes
+  format: text
+  definition:
+    de: Angabe, ob und wie stark das Bauteil der Witterung ausgesetzt war, zum Beispiel innen, aussen geschützt, aussen frei bewittert
+    fr: Indique si et dans quelle mesure l'élément a été exposé aux intempéries, par exemple intérieur, extérieur protégé, extérieur exposé
+    it: Indica se e in che misura il componente è stato esposto alle intemperie, ad esempio interno, esterno protetto, esterno esposto
+    en: States whether and how strongly the component was exposed to the weather, for example indoors, outdoors sheltered, outdoors fully exposed
+- key: zoneInDonorBuilding
+  label:
+    de: Zone im Gebäude
+    fr: Zone dans le bâtiment
+    it: Zona nell'edificio
+    en: Zone in building
+  group: furtherAttributes
+  format: text
+  definition:
+    de: Zone oder Bereich des Quellobjekts, dem das Bauteil zugeordnet ist
+    fr: Zone ou secteur du bâtiment source auquel l'élément est attribué
+    it: Zona o settore dell'edificio di origine a cui è attribuito il componente
+    en: Zone or area of the donor building to which the component is assigned
+- key: materialKbob
+  label:
+    de: Material nach KBOB
+    fr: Matériau selon KBOB
+    it: Materiale secondo KBOB
+    en: Material according to KBOB
+  group: furtherAttributes
+  format: multiline
+  definition:
+    de: Materialien des Bauteils nach der KBOB-Liste mit ihrem jeweiligen Anteil
+    fr: Matériaux de l'élément selon la liste KBOB, avec leur part respective
+    it: Materiali del componente secondo l'elenco KBOB, con la rispettiva quota
+    en: Materials of the component according to the KBOB list, with their respective shares
+- key: colorInHex
+  label:
+    de: Farbe als HEX
+    fr: Couleur en HEX
+    it: Colore in HEX
+    en: Colour as HEX
+  group: furtherAttributes
+  format: text
+  definition:
+    de: 'Farbe des Bauteils als Hexadezimalwert, zum Beispiel #A0522D'
+    fr: 'Couleur de l''élément en valeur hexadécimale, par exemple #A0522D'
+    it: 'Colore del componente come valore esadecimale, ad esempio #A0522D'
+    en: 'Colour of the component as a hexadecimal value, for example #A0522D'
+- key: warranty
+  label:
+    de: Gewährleistung
+    fr: Garantie
+    it: Garanzia
+    en: Warranty
+  group: furtherAttributes
+  format: multiline
+  definition:
+    de: Angaben zu einer Gewährleistung oder Garantie auf das wiederverwendete Bauteil
+    fr: Indications sur une garantie accordée pour l'élément réemployé
+    it: Indicazioni su una garanzia concessa per il componente riutilizzato
+    en: Details of any warranty or guarantee given on the reused component
+- key: priceOriginal
+  label:
+    de: Originalpreis
+    fr: Prix d'origine
+    it: Prezzo originale
+    en: Original price
+  group: furtherAttributes
+  format: number
+  unit: CHF
+  definition:
+    de: Neupreis des Bauteils in Schweizer Franken, soweit bekannt
+    fr: Prix à neuf de l'élément en francs suisses, s'il est connu
+    it: Prezzo a nuovo del componente in franchi svizzeri, se noto
+    en: Price of the component when new, in Swiss francs, where known
+- key: defects
+  label:
+    de: Mängel
+    fr: Défauts
+    it: Difetti
+    en: Defects
+  group: furtherAttributes
+  format: multiline
+  definition:
+    de: Bekannte Mängel oder Schäden des Bauteils
+    fr: Défauts ou dommages connus de l'élément
+    it: Difetti o danni noti del componente
+    en: Known defects of or damage to the component
+- key: uValue
+  label:
+    de: U-Wert
+    fr: Valeur U
+    it: Valore U
+    en: U-value
+  group: technical
+  format: number
+  unit: W/m²K
+  definition:
+    de: Wärmedurchgangskoeffizient des Bauteils gemäss Herstellerangabe oder Messung
+    fr: Coefficient de transmission thermique de l'élément selon les indications du fabricant ou une mesure
+    it: Coefficiente di trasmissione termica del componente secondo le indicazioni del fabbricante o una misurazione
+    en: Thermal transmittance of the component according to the manufacturer or a measurement
+- key: volumeInLiters
+  label:
+    de: Nutzvolumen in Litern
+    fr: Volume utile en litres
+    it: Volume utile in litri
+    en: Usable volume in litres
+  group: technical
+  format: number
+  unit: l
+  definition:
+    de: Nutzbares Volumen des Bauteils in Litern, zum Beispiel bei Speichern oder Becken
+    fr: Volume utile de l'élément en litres, par exemple pour des réservoirs ou des bassins
+    it: Volume utile del componente in litri, ad esempio per serbatoi o vasche
+    en: Usable volume of the component in litres, for example for tanks or basins
+- key: volumeInM3
+  label:
+    de: Nutzvolumen in Kubikmetern
+    fr: Volume utile en mètres cubes
+    it: Volume utile in metri cubi
+    en: Usable volume in cubic metres
+  group: technical
+  format: number
+  unit: m³
+  definition:
+    de: Nutzbares Volumen des Bauteils in Kubikmetern, zum Beispiel bei Containern oder Silos
+    fr: Volume utile de l'élément en mètres cubes, par exemple pour des conteneurs ou des silos
+    it: Volume utile del componente in metri cubi, ad esempio per container o silos
+    en: Usable volume of the component in cubic metres, for example for containers or silos
+- key: electricConnector
+  label:
+    de: Stromanschluss
+    fr: Raccordement électrique
+    it: Allacciamento elettrico
+    en: Electrical connection
+  group: technical
+  format: text
+  definition:
+    de: Art des Stromanschlusses, zum Beispiel Steckertyp oder Festanschluss
+    fr: Type de raccordement électrique, par exemple type de fiche ou raccordement fixe
+    it: Tipo di allacciamento elettrico, ad esempio tipo di spina o allacciamento fisso
+    en: Type of electrical connection, for example plug type or fixed connection
+- key: electricVoltage
+  label:
+    de: Elektrische Spannung
+    fr: Tension électrique
+    it: Tensione elettrica
+    en: Voltage
+  group: technical
+  format: number
+  unit: V
+  definition:
+    de: Nennspannung des Bauteils
+    fr: Tension nominale de l'élément
+    it: Tensione nominale del componente
+    en: Rated voltage of the component
+- key: electricWatt
+  label:
+    de: Elektrische Leistung
+    fr: Puissance électrique
+    it: Potenza elettrica
+    en: Electrical power
+  group: technical
+  format: number
+  unit: W
+  definition:
+    de: Nennleistung des Bauteils
+    fr: Puissance nominale de l'élément
+    it: Potenza nominale del componente
+    en: Rated power of the component
+- key: electricAmp
+  label:
+    de: Stromstärke
+    fr: Intensité du courant
+    it: Intensità di corrente
+    en: Current
+  group: technical
+  format: number
+  unit: A
+  definition:
+    de: Nennstrom des Bauteils
+    fr: Courant nominal de l'élément
+    it: Corrente nominale del componente
+    en: Rated current of the component
+- key: kitchenNorm
+  label:
+    de: Küchennorm
+    fr: Norme de cuisine
+    it: Norma per cucine
+    en: Kitchen standard
+  group: technical
+  format: text
+  definition:
+    de: Massnorm, nach der Küchenelemente gebaut sind, zum Beispiel SMS (55 cm) oder EURO (60 cm)
+    fr: Norme dimensionnelle des éléments de cuisine, par exemple SMS (55 cm) ou EURO (60 cm)
+    it: Norma dimensionale degli elementi di cucina, ad esempio SMS (55 cm) o EURO (60 cm)
+    en: Dimensional standard to which kitchen units are built, for example SMS (55 cm) or EURO (60 cm)
+- key: holeSpacing
+  label:
+    de: Lochabstand
+    fr: Entraxe des trous
+    it: Interasse dei fori
+    en: Hole spacing
+  group: technical
+  format: number
+  unit: mm
+  definition:
+    de: Abstand zwischen den Befestigungs- oder Anschlusslöchern, von Mitte zu Mitte gemessen
+    fr: Distance entre les trous de fixation ou de raccordement, mesurée d'axe en axe
+    it: Distanza tra i fori di fissaggio o di raccordo, misurata da centro a centro
+    en: Distance between fixing or connection holes, measured centre to centre
+- key: activeOnPlatform
+  label:
+    de: Aktiviert auf Plattform
+    fr: Activé sur la plateforme
+    it: Attivato sulla piattaforma
+    en: Active on platform
+  group: platform
+  format: boolean
+  definition:
+    de: Angabe, ob das Bauteil auf der Vermittlungsplattform sichtbar ist
+    fr: Indique si l'élément est visible sur la plateforme de placement
+    it: Indica se il componente è visibile sulla piattaforma di collocamento
+    en: States whether the component is visible on the placement platform
+- key: topOfferOnPlatform
+  label:
+    de: Top-Angebot auf Plattform
+    fr: Offre vedette sur la plateforme
+    it: Offerta in evidenza sulla piattaforma
+    en: Top offer on platform
+  group: platform
+  format: boolean
+  definition:
+    de: Angabe, ob das Bauteil auf der Plattform hervorgehoben wird
+    fr: Indique si l'élément est mis en avant sur la plateforme
+    it: Indica se il componente è messo in evidenza sulla piattaforma
+    en: States whether the component is featured on the platform
+- key: paymentMethod
+  label:
+    de: Zahlungsart
+    fr: Mode de paiement
+    it: Modalità di pagamento
+    en: Payment method
+  group: platform
+  format: text
+  definition:
+    de: Zulässige Zahlungsarten, zum Beispiel Rechnung oder Vorauskasse
+    fr: Modes de paiement admis, par exemple facture ou paiement anticipé
+    it: Modalità di pagamento ammesse, ad esempio fattura o pagamento anticipato
+    en: Accepted payment methods, for example invoice or advance payment
+- key: shippingMethod
+  label:
+    de: Versandart
+    fr: Mode d'expédition
+    it: Modalità di spedizione
+    en: Shipping method
+  group: platform
+  format: text
+  definition:
+    de: Mögliche Arten der Übergabe oder Lieferung, zum Beispiel Abholung oder Spedition
+    fr: Modes de remise ou de livraison possibles, par exemple retrait ou transporteur
+    it: Modalità di consegna possibili, ad esempio ritiro o spedizioniere
+    en: Possible ways of handover or delivery, for example collection or haulier
+- key: reservedStock
+  label:
+    de: Reservierte Bestände
+    fr: Stocks réservés
+    it: Scorte riservate
+    en: Reserved stock
+  group: platform
+  format: number
+  definition:
+    de: Menge, die bereits für Abnehmerinnen reserviert ist, in der gewählten Einheit
+    fr: Quantité déjà réservée pour des repreneurs, dans l'unité choisie
+    it: Quantità già riservata per gli acquirenti, nell'unità scelta
+    en: Quantity already reserved for takers, in the chosen unit

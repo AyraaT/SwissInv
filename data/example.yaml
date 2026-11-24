@@ -1,0 +1,27 @@
+# Beispiel-Bauteil für die Website (Karte im Einstieg) und als Anschauung für einen Datensatz.
+# record: Werte mit den Keys des Datenfeldverzeichnisses; Freitext in vier Sprachen.
+# card:   Datenfelder, die auf der Karte gezeigt werden, in dieser Reihenfolge.
+entity: component
+record:
+  name:
+    de: Holzfenster, zweiflüglig
+    fr: Fenêtre en bois à deux vantaux
+    it: Finestra in legno a due ante
+    en: Timber window, two sashes
+  componentId: INV-0421
+  ebkphCode: XY00
+  quantityMin: 14
+  quantityMax: 14
+  unit: pc
+  zDim: 140
+  yDim: 120
+  xDim: 6.8
+  material: [on01, mi05]
+  materialNotes:
+    de: Lärche, lasiert
+    fr: Mélèze, lasuré
+    it: Larice, velato
+    en: Larch, glazed finish
+  visualCondition: '2'
+  functionalCondition: '1'
+card: [ebkphCode, material, materialNotes, zDim, yDim, quantityMin, visualCondition, functionalCondition]

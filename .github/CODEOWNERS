@@ -1,0 +1,9 @@
+# Wer muss Änderungen freigeben? Platzhalter ersetzen und die Zeilen aktivieren,
+# sobald Organisation und Teams auf GitHub bestehen.
+#
+# Kern und Normtext: Steuerungsgruppe
+# /data/core/   ORGANISATION/steuerungsgruppe
+# /docs/norm/   ORGANISATION/steuerungsgruppe
+#
+# Erweiterungen und alles Übrige: Redaktion
+# *             ORGANISATION/redaktion

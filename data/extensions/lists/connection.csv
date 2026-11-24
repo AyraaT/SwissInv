@@ -1,0 +1,20 @@
+key,group,de,fr,it,en,definition_de,definition_fr,definition_it,definition_en
+0,,Keine Angabe,Aucune indication,Nessuna indicazione,Not specified,,,,
+1,,Lose,Posé librement,Posato libero,Loose,,,,
+2,,Geschraubt / Gesteckt,Vissé / Enfiché,Avvitato / A innesto,Screwed / Plugged,,,,
+3,,Genagelt / Genietet,Cloué / Riveté,Inchiodato / Rivettato,Nailed / Riveted,,,,
+4,,Festverbaut,Fixé à demeure,Fissato in modo permanente,Permanently fixed,,,,
+unknown,,Verbindung unbekannt,Assemblage inconnu,Collegamento sconosciuto,Connection unknown,,,,
+screwed,,Geschraubt,Vissé,Avvitato,Screwed,,,,
+nailed,,Genagelt,Cloué,Inchiodato,Nailed,,,,
+glued,,Geklebt,Collé,Incollato,Glued,,,,
+welded,,Geschweisst,Soudé,Saldato,Welded,,,,
+riveted,,Genietet,Riveté,Rivettato,Riveted,,,,
+interlocked,,Verzahnt,Emboîté,A incastro,Interlocked,z. B. bei Holzverbindungen,p. ex. pour les assemblages en bois,ad es. nei collegamenti in legno,e.g. in timber joints
+plugged,,Gesteckt,Enfiché,A innesto,Plugged,z. B. bei Blechverbindungen,p. ex. pour les assemblages en tôle,ad es. nei collegamenti in lamiera,e.g. in sheet-metal joints
+clamped,,Geklemmt,Serré,Serrato,Clamped,,,,
+clipped,,Geclipst,Clipsé,A clip,Clipped,z. B. bei Kunststoffelementen,p. ex. pour les éléments en plastique,ad es. negli elementi in plastica,e.g. for plastic elements
+flanged,,Gebördelt,Serti,Bordato,Flanged,z. B. bei Rohrverbindungen,p. ex. pour les raccords de tuyaux,ad es. nei raccordi di tubi,e.g. in pipe joints
+dowelled,,Verzapft,Assemblé à tenon et mortaise,A tenone e mortasa,Mortise and tenon,z. B. traditionelle Holzverbindungen,p. ex. assemblages traditionnels en bois,ad es. collegamenti tradizionali in legno,e.g. traditional timber joints
+soldered,,Verlötet,Brasé,Brasato,Soldered,z. B. bei Metallrohren,p. ex. pour les tuyaux métalliques,ad es. nei tubi metallici,e.g. for metal pipes
+other,,Andere,Autre,Altro,Other,,,,

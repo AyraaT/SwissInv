@@ -1,0 +1,131 @@
+# Mindestumfang pro Bauteil im Wiederverwendungs-Audit Stufe I.
+# obligation: muss | sollte
+# entity bei einer Anforderung: Bereich des Datenfelds, wenn es kein Bauteil-Datenfeld ist.
+# label: Name des Blatts in der Excel-Vorlage und des Filters auf der Website; short: Spaltenkopf in Tabellen.
+profile: stage-1
+order: 1
+title:
+  de: Wiederverwendungs-Audit Stufe I
+  fr: Audit de réemploi niveau I
+  it: Audit di riuso livello I
+  en: Reuse audit stage I
+label:
+  de: Audit Stufe I
+  fr: Audit niveau I
+  it: Audit livello I
+  en: Audit stage I
+short:
+  de: Stufe I
+  fr: Niveau I
+  it: Livello I
+  en: Stage I
+entity: component
+requirements:
+- information:
+    de: Projektname
+    fr: Nom du projet
+    it: Nome del progetto
+    en: Project name
+  obligation: muss
+  entity: project
+  fields:
+  - projectName
+- information:
+    de: Eigentümerin, Auftraggeberin und Auftragnehmerin
+    fr: Propriétaire, mandant et mandataire
+    it: Proprietario, committente e mandatario
+    en: Owner, client and auditor
+  obligation: muss
+  entity: project
+  fields:
+  - projectOwner
+  - projectAuditClient
+  - projectAuditor
+- information:
+    de: Adresse des Quellobjekts
+    fr: Adresse du bâtiment source
+    it: Indirizzo dell'edificio di origine
+    en: Address of the donor building
+  obligation: muss
+  entity: donorBuilding
+  fields:
+  - donorBuildingStreet
+  - donorBuildingHouseNumber
+  - donorBuildingPostalCode
+  - donorBuildingCity
+- information:
+    de: Land des Quellobjekts
+    fr: Pays du bâtiment source
+    it: Paese dell'edificio di origine
+    en: Country of the donor building
+  obligation: sollte
+  entity: donorBuilding
+  fields:
+  - donorBuildingCountry
+- information:
+    de: Gebäudedaten nach GWR und Bauweise
+    fr: Données du bâtiment selon le RegBL et mode de construction
+    it: Dati dell'edificio secondo il REA e tipo di costruzione
+    en: Building data according to the RBD and construction type
+  obligation: sollte
+  entity: donorBuilding
+  fields:
+  - donorBuildingGklas
+  - donorBuildingGkat
+  - donorBuildingGbaup
+  - donorBuildingConstructionType
+  - donorBuildingGbauj
+  - donorBuildingGvol
+  - donorBuildingGarea
+  - donorBuildingGastw
+- information:
+    de: Kurze Bezeichnung
+    fr: Désignation courte
+    it: Denominazione breve
+    en: Short name
+  obligation: muss
+  fields:
+  - name
+- information:
+    de: eBKP-H
+    fr: eCCC-Bât
+    it: eCCC-E
+    en: eBKP-H
+  obligation: muss
+  fields:
+  - ebkphCode
+  - ebkphLabel
+- information:
+    de: Menge, ggf. überschlägig inkl. Ausweisung der Ungenauigkeit
+    fr: Quantité, le cas échéant approximative, avec indication de l'imprécision
+    it: Quantità, eventualmente approssimativa, con indicazione dell'imprecisione
+    en: Quantity, approximate where necessary, stating the uncertainty
+  obligation: muss
+  fields:
+  - quantityMin
+  - quantityMax
+  - unit
+- information:
+    de: Mindestens eine Materialkategorie
+    fr: Au moins une catégorie de matériau
+    it: Almeno una categoria di materiale
+    en: At least one material category
+  obligation: muss
+  fields:
+  - material
+- information:
+    de: Weitere Informationen
+    fr: Informations complémentaires
+    it: Ulteriori informazioni
+    en: Further information
+  obligation: sollte
+  fields:
+  - description
+- information:
+    de: Empfehlung für oder gegen eine vertiefte Aufnahme
+    fr: Recommandation pour ou contre un relevé approfondi
+    it: Raccomandazione a favore o contro un rilievo approfondito
+    en: Recommendation for or against an in-depth survey
+  obligation: muss
+  fields:
+  - recDetailedAssessment

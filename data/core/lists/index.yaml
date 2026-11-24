@@ -1,0 +1,139 @@
+# Verzeichnis der Auswahllisten in diesem Ordner.
+# placeholder  = Liste enthält nur Platzhalter; die echten Werte sind (noch) nicht hinterlegt
+lists:
+- name: ebkph
+  title:
+    de: eBKP-H (Referenzauswahl)
+    fr: eCCC-Bât (sélection de référence)
+    it: eCCC-E (selezione di riferimento)
+    en: eBKP-H (reference selection)
+  file: ebkph.csv
+  note:
+    de: Platzhalter. Die Codes und Bezeichnungen nach eBKP-H SN 506 511 sind hier nicht hinterlegt. Die eBKP-H sollte nur in der Ebene Elementgruppe oder Element angegeben werden.
+    fr: Valeurs fictives. Les codes et désignations selon eCCC-Bât SN 506 511 ne figurent pas ici. L'eCCC-Bât ne devrait être indiqué qu'au niveau du groupe d'éléments ou de l'élément.
+    it: Segnaposto. I codici e le denominazioni secondo eCCC-E SN 506 511 non sono riportati qui. L'eCCC-E andrebbe indicato solo a livello di gruppo di elementi o di elemento.
+    en: Placeholders. The codes and labels according to eBKP-H SN 506 511 are not held here. eBKP-H should only be given at the level of element group or element.
+  placeholder: true
+- name: unit
+  title:
+    de: Einheit
+    fr: Unité
+    it: Unità
+    en: Unit
+  file: unit.csv
+- name: material
+  title:
+    de: Materialkategorie
+    fr: Catégorie de matériau
+    it: Categoria di materiale
+    en: Material category
+  file: material.csv
+  groups:
+    metallic:
+      de: Metallisch
+      fr: Métallique
+      it: Metallico
+      en: Metallic
+    organicNatural:
+      de: 'Organisch: natürlich'
+      fr: 'Organique: naturel'
+      it: 'Organico: naturale'
+      en: 'Organic: natural'
+    organicSynthetic:
+      de: 'Organisch: synthetisch'
+      fr: 'Organique: synthétique'
+      it: 'Organico: sintetico'
+      en: 'Organic: synthetic'
+    mineral:
+      de: Mineralisch
+      fr: Minéral
+      it: Minerale
+      en: Mineral
+    composite:
+      de: Verbund
+      fr: Composite
+      it: Composito
+      en: Composite
+    unknown:
+      de: Unbekannt
+      fr: Inconnu
+      it: Sconosciuto
+      en: Unknown
+- name: pollutant-report
+  title:
+    de: Schadstoffgutachten
+    fr: Diagnostic polluants
+    it: Perizia sulle sostanze nocive
+    en: Pollutant report
+  file: pollutant-report.csv
+- name: visual-condition
+  title:
+    de: Visueller Zustand
+    fr: État visuel
+    it: Stato visivo
+    en: Visual condition
+  file: visual-condition.csv
+- name: functional-condition
+  title:
+    de: Funktionaler Zustand
+    fr: État fonctionnel
+    it: Stato funzionale
+    en: Functional condition
+  file: functional-condition.csv
+- name: demountability
+  title:
+    de: Demontageaufwand
+    fr: Effort de démontage
+    it: Onere di smontaggio
+    en: Dismantling effort
+  file: demountability.csv
+- name: rec-detailed-assessment
+  title:
+    de: Empfehlung Detailaufnahme
+    fr: Recommandation relevé détaillé
+    it: Raccomandazione rilievo dettagliato
+    en: Recommendation detailed survey
+  file: rec-detailed-assessment.csv
+- name: rec-distribution
+  title:
+    de: Empfehlung Vermittlung
+    fr: Recommandation placement
+    it: Raccomandazione collocamento
+    en: Recommendation placement
+  file: rec-distribution.csv
+- name: gwr-gkat
+  title:
+    de: Gebäudekategorie (GWR GKAT)
+    fr: Catégorie de bâtiment (RegBL GKAT)
+    it: Categoria di edificio (REA GKAT)
+    en: Building category (RBD GKAT)
+  file: gwr-gkat.csv
+  note:
+    de: 'Codes und Bezeichnungen wörtlich aus dem Merkmalskatalog des eidg. Gebäude- und Wohnungsregisters (BFS): Deutsch und Französisch aus Version 5.0.0, Italienisch und Englisch aus Version 4.3.2.'
+    fr: 'Codes et désignations repris tels quels du catalogue des caractères du Registre fédéral des bâtiments et des logements (OFS): allemand et français de la version 5.0.0, italien et anglais de la version 4.3.2.'
+    it: 'Codici e denominazioni ripresi alla lettera dal catalogo delle caratteristiche del Registro federale degli edifici e delle abitazioni (UST): tedesco e francese dalla versione 5.0.0, italiano e inglese dalla versione 4.3.2.'
+    en: 'Codes and labels taken verbatim from the catalogue of attributes of the Federal Register of Buildings and Dwellings (FSO): German and French from version 5.0.0, Italian and English from version 4.3.2.'
+- name: gwr-gklas
+  title:
+    de: Gebäudeklasse (GWR GKLAS)
+    fr: Classe de bâtiment (RegBL GKLAS)
+    it: Classe di edificio (REA GKLAS)
+    en: Building class (RBD GKLAS)
+  file: gwr-gklas.csv
+  note:
+    de: 'Codes und Bezeichnungen wörtlich aus dem Merkmalskatalog des eidg. Gebäude- und Wohnungsregisters (BFS): Deutsch und Französisch aus Version 5.0.0, Italienisch und Englisch aus Version 4.3.2.'
+    fr: 'Codes et désignations repris tels quels du catalogue des caractères du Registre fédéral des bâtiments et des logements (OFS): allemand et français de la version 5.0.0, italien et anglais de la version 4.3.2.'
+    it: 'Codici e denominazioni ripresi alla lettera dal catalogo delle caratteristiche del Registro federale degli edifici e delle abitazioni (UST): tedesco e francese dalla versione 5.0.0, italiano e inglese dalla versione 4.3.2.'
+    en: 'Codes and labels taken verbatim from the catalogue of attributes of the Federal Register of Buildings and Dwellings (FSO): German and French from version 5.0.0, Italian and English from version 4.3.2.'
+- name: gwr-gbaup
+  title:
+    de: Bauperiode (GWR GBAUP)
+    fr: Epoque de construction (RegBL GBAUP)
+    it: Epoca di costruzione (REA GBAUP)
+    en: Period of construction (RBD GBAUP)
+  file: gwr-gbaup.csv
+  note:
+    de: 'Codes und Bezeichnungen wörtlich aus dem Merkmalskatalog des eidg. Gebäude- und Wohnungsregisters (BFS): Deutsch und Französisch aus Version 5.0.0, Italienisch und Englisch aus Version 4.3.2.'
+    fr: 'Codes et désignations repris tels quels du catalogue des caractères du Registre fédéral des bâtiments et des logements (OFS): allemand et français de la version 5.0.0, italien et anglais de la version 4.3.2.'
+    it: 'Codici e denominazioni ripresi alla lettera dal catalogo delle caratteristiche del Registro federale degli edifici e delle abitazioni (UST): tedesco e francese dalla versione 5.0.0, italiano e inglese dalla versione 4.3.2.'
+    en: 'Codes and labels taken verbatim from the catalogue of attributes of the Federal Register of Buildings and Dwellings (FSO): German and French from version 5.0.0, Italian and English from version 4.3.2.'

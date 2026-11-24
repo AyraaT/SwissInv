@@ -1,0 +1,249 @@
+# Stabiler Kern: Änderungen nur mit einer neuen Ausgabe der Norm (siehe CONTRIBUTING.md).
+entity: donorBuilding
+title:
+  de: Quellobjekte
+  fr: Bâtiments sources
+  it: Edifici di origine
+  en: Donor buildings
+layer: core
+fields:
+- key: donorBuildingEgid
+  label:
+    de: EGID
+    fr: EGID
+    it: EGID
+    en: EGID
+  group: address
+  format: text
+  definition:
+    de: "Eidgenössischer Gebäudeidentifikator: Gebäudeidentifikationsnummer im eidg. GWR. Quelle: GWR-Merkmalskatalog 5.0, Merkmal EGID."
+    fr: "Identificateur fédéral de bâtiment: numéro d'identification du bâtiment dans le RegBL fédéral. Source: catalogue des caractères RegBL 5.0, caractère EGID."
+    it: "Identificatore federale dell'edificio: numero di identificazione dell'edificio nel REA federale. Fonte: catalogo dei caratteri REA 5.0, carattere EGID."
+    en: "Federal building identifier: building identifier in the Federal RBD. Source: GWR catalogue of attributes 5.0, attribute EGID."
+- key: donorBuildingEgrid
+  label:
+    de: EGRID
+    fr: EGRID
+    it: EGRID
+    en: EGRID
+  group: address
+  format: text
+  definition:
+    de: "Eidgenössischer Grundstücksidentifikator (E-GRID) des Grundstücks, auf dem das Gebäude steht. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GEGRID."
+    fr: "Identificateur fédéral (E-GRID) de l'immeuble (bien-fonds), objet de la propriété foncière, sur lequel le bâtiment est construit. Source: catalogue des caractères RegBL 5.0, caractère GEGRID."
+    it: "Identificatore federale (E-GRID) del fondo, oggetto della proprietà fondiaria, sul quale si trova l'edificio. Fonte: catalogo dei caratteri REA 5.0, carattere GEGRID."
+    en: "Federal identifier (E-GRID) of the parcel of land, object of the real property, on which the building is situated. Source: GWR catalogue of attributes 5.0, attribute GEGRID."
+- key: donorBuildingStreet
+  label:
+    de: Strasse
+    fr: Rue
+    it: Via
+    en: Street
+  group: address
+  format: text
+  definition:
+    de: Strassenname der Adresse des Quellobjekts
+    fr: Nom de la rue de l'adresse du bâtiment source
+    it: Nome della via dell'indirizzo dell'edificio di origine
+    en: Street name of the address of the donor building
+- key: donorBuildingHouseNumber
+  label:
+    de: Hausnummer
+    fr: Numéro
+    it: Numero civico
+    en: House number
+  group: address
+  format: text
+  definition:
+    de: Hausnummer der Adresse des Quellobjekts
+    fr: Numéro de maison de l'adresse du bâtiment source
+    it: Numero civico dell'indirizzo dell'edificio di origine
+    en: House number of the address of the donor building
+- key: donorBuildingPostalCode
+  label:
+    de: Postleitzahl
+    fr: Code postal
+    it: Codice postale
+    en: Postal code
+  group: address
+  format: postalCode
+  definition:
+    de: Postleitzahl der Adresse des Quellobjekts
+    fr: Code postal de l'adresse du bâtiment source
+    it: Codice postale dell'indirizzo dell'edificio di origine
+    en: Postal code of the address of the donor building
+- key: donorBuildingCity
+  label:
+    de: Ort
+    fr: Localité
+    it: Località
+    en: City
+  group: address
+  format: text
+  definition:
+    de: Ortschaft der Adresse des Quellobjekts
+    fr: Localité de l'adresse du bâtiment source
+    it: Località dell'indirizzo dell'edificio di origine
+    en: Town or city of the address of the donor building
+- key: donorBuildingCountry
+  label:
+    de: Land
+    fr: Pays
+    it: Paese
+    en: Country
+  group: address
+  format: country
+  definition:
+    de: Land der Adresse des Quellobjekts als zweistelliger Ländercode nach ISO 3166-1 (z. B. CH)
+    fr: Pays de l'adresse du bâtiment source sous forme de code pays à deux lettres selon ISO 3166-1 (p. ex. CH)
+    it: Paese dell'indirizzo dell'edificio di origine come codice paese a due lettere secondo ISO 3166-1 (ad es. CH)
+    en: Country of the address of the donor building as a two-letter country code according to ISO 3166-1 (e.g. CH)
+- key: donorBuildingGklas
+  label:
+    de: Gebäudeklasse
+    fr: Classe de bâtiment
+    it: Classe di edificio
+    en: Building class
+  group: buildingData
+  format: code
+  list: gwr-gklas
+  definition:
+    de: "Einteilung der Gebäude nach Eurostat-Klassifikation. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GKLAS."
+    fr: "Ventilation des bâtiments selon la classification d'Eurostat. Source: catalogue des caractères RegBL 5.0, caractère GKLAS."
+    it: "Suddivisione degli edifici secondo la classificazione di Eurostat. Fonte: catalogo dei caratteri REA 5.0, carattere GKLAS."
+    en: "Break down of buildings according to Eurostat classification. Source: GWR catalogue of attributes 5.0, attribute GKLAS."
+- key: donorBuildingGkat
+  label:
+    de: Gebäudekategorie
+    fr: Catégorie de bâtiment
+    it: Categoria di edificio
+    en: Building category
+  group: buildingData
+  format: code
+  list: gwr-gkat
+  definition:
+    de: "Einteilung der Gebäude entsprechend ihrer Zweckbestimmung. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GKAT."
+    fr: "Subdivision des bâtiments selon leur affectation. Source: catalogue des caractères RegBL 5.0, caractère GKAT."
+    it: "Suddivisione degli edifici secondo la destinazione. Fonte: catalogo dei caratteri REA 5.0, carattere GKAT."
+    en: "Subdivision of buildings according to purpose. Source: GWR catalogue of attributes 5.0, attribute GKAT."
+- key: donorBuildingGbaup
+  label:
+    de: Bauperiode
+    fr: Epoque de construction
+    it: Epoca di costruzione
+    en: Period of construction
+  group: buildingData
+  format: code
+  list: gwr-gbaup
+  definition:
+    de: "Angabe zu Periode der Fertigstellung des Gebäudes. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GBAUP."
+    fr: "Indication sur l'époque de l'achèvement du bâtiment. Source: catalogue des caractères RegBL 5.0, caractère GBAUP."
+    it: "Indicazione dell'epoca di completamento dell'edificio. Fonte: catalogo dei caratteri REA 5.0, carattere GBAUP."
+    en: "Information on the period of completion of the building. Source: GWR catalogue of attributes 5.0, attribute GBAUP."
+- key: donorBuildingConstructionType
+  label:
+    de: Bauweise
+    fr: Mode de construction
+    it: Tipo di costruzione
+    en: Construction type
+  group: buildingData
+  format: code
+  list: construction-type
+  definition:
+    de: Vorherrschende Bauweise bzw. Tragkonstruktion des Gebäudes, zum Beispiel Massivbau, Skelettbau oder Holzbau
+    fr: Mode de construction ou structure porteuse prédominante du bâtiment, par exemple construction massive, à ossature ou en bois
+    it: Tipo di costruzione o struttura portante predominante dell'edificio, ad esempio costruzione massiccia, a scheletro o in legno
+    en: Predominant construction type or load-bearing structure of the building, for example solid, frame or timber construction
+- key: donorBuildingGbauj
+  label:
+    de: Baujahr des Gebäudes
+    fr: Année de construction du bâtiment
+    it: Anno di costruzione dell'edificio
+    en: Year of construction of the building
+  group: buildingData
+  format: year
+  definition:
+    de: "Angabe zu Jahr der Fertigstellung des Gebäudes. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GBAUJ."
+    fr: "Indication sur l'année de l'achèvement du bâtiment. Source: catalogue des caractères RegBL 5.0, caractère GBAUJ."
+    it: "Indicazione dell'anno di completamento dell'edificio. Fonte: catalogo dei caratteri REA 5.0, carattere GBAUJ."
+    en: "Information on the year of completion of the building. Source: GWR catalogue of attributes 5.0, attribute GBAUJ."
+- key: donorBuildingGvol
+  label:
+    de: Gebäudevolumen
+    fr: Volume du bâtiment
+    it: Volume dell'edificio
+    en: Building volume
+  group: buildingData
+  format: number
+  unit: m³
+  definition:
+    de: "Angabe zum Volumen des Gebäudes. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GVOL."
+    fr: "Indication sur le volume du bâtiment. Source: catalogue des caractères RegBL 5.0, caractère GVOL."
+    it: "Indicazione del volume dell'edificio. Fonte: catalogo dei caratteri REA 5.0, carattere GVOL."
+    en: "Information on the volume of the building. Source: GWR catalogue of attributes 5.0, attribute GVOL."
+- key: donorBuildingGarea
+  label:
+    de: Gebäudefläche
+    fr: Surface du bâtiment
+    it: Superficie dell'edificio
+    en: Surface area of building (floor area)
+  group: buildingData
+  format: number
+  unit: m²
+  definition:
+    de: "Gebäudefläche in Quadratmetern. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GAREA."
+    fr: "Surface du bâtiment en mètres carrés. Source: catalogue des caractères RegBL 5.0, caractère GAREA."
+    it: "Superficie dell'edificio in metri quadrati. Fonte: catalogo dei caratteri REA 5.0, carattere GAREA."
+    en: "Building surface area in square metres. Source: GWR catalogue of attributes 5.0, attribute GAREA."
+- key: donorBuildingGastw
+  label:
+    de: Anzahl Geschosse
+    fr: Nombre de niveaux
+    it: Numero di piani
+    en: Number of floors
+  group: buildingData
+  format: number
+  definition:
+    de: "Anzahl Geschosse und Untergeschosse, einschliesslich Erdgeschoss. Quelle: GWR-Merkmalskatalog 5.0, Merkmal GASTW."
+    fr: "Nombre d'étages et de sous-sols, rez-de-chaussée inclus. Source: catalogue des caractères RegBL 5.0, caractère GASTW."
+    it: "Numero di piani compreso il pianterreno. Fonte: catalogo dei caratteri REA 5.0, carattere GASTW."
+    en: "Number of floors and basements, including ground floor. Source: GWR catalogue of attributes 5.0, attribute GASTW."
+- key: donorBuildingPreviousRenovations
+  label:
+    de: Vergangene Umbaumassnahmen
+    fr: Transformations antérieures
+    it: Trasformazioni precedenti
+    en: Previous renovations
+  group: details
+  format: multiline
+  definition:
+    de: Bekannte frühere Umbauten, Sanierungen oder Erweiterungen des Gebäudes, möglichst mit Jahr
+    fr: Transformations, rénovations ou agrandissements antérieurs connus du bâtiment, si possible avec l'année
+    it: Trasformazioni, risanamenti o ampliamenti precedenti noti dell'edificio, se possibile con l'anno
+    en: Known earlier conversions, refurbishments or extensions of the building, with the year where possible
+- key: donorBuildingAccess
+  label:
+    de: Erschliessung
+    fr: Accès
+    it: Accesso
+    en: Access
+  group: details
+  format: multiline
+  definition:
+    de: Zugänglichkeit des Gebäudes für Demontage und Abtransport, zum Beispiel Zufahrt, Lift, Kranstellplatz
+    fr: Accessibilité du bâtiment pour le démontage et l'évacuation, par exemple accès routier, ascenseur, emplacement pour grue
+    it: Accessibilità dell'edificio per lo smontaggio e il trasporto, ad esempio accesso stradale, ascensore, area per gru
+    en: Accessibility of the building for dismantling and removal, for example vehicle access, lift, crane position
+- key: donorBuildingDetails
+  label:
+    de: Weitere Informationen
+    fr: Informations complémentaires
+    it: Ulteriori informazioni
+    en: Further information
+  group: details
+  format: multiline
+  definition:
+    de: Weitere relevante Angaben zum Quellobjekt, welche nicht durch die übrigen Datenfelder abgedeckt sind
+    fr: Autres indications pertinentes sur le bâtiment source qui ne sont pas couvertes par les autres champs
+    it: Ulteriori indicazioni rilevanti sull'edificio di origine non coperte dagli altri campi
+    en: Further relevant information on the donor building not covered by the other data fields

@@ -1,0 +1,139 @@
+# Stabiler Kern: Änderungen nur mit einer neuen Ausgabe der Norm (siehe CONTRIBUTING.md).
+entity: contact
+title:
+  de: Kontakte
+  fr: Contacts
+  it: Contatti
+  en: Contacts
+layer: core
+fields:
+- key: contactName
+  label:
+    de: Name
+    fr: Nom
+    it: Nome
+    en: Name
+  group: contactPerson
+  format: text
+  definition:
+    de: Vor- und Nachname der Ansprechperson
+    fr: Prénom et nom de la personne de contact
+    it: Nome e cognome della persona di contatto
+    en: First and last name of the contact person
+- key: contactRole
+  label:
+    de: Projektrolle
+    fr: Rôle dans le projet
+    it: Ruolo nel progetto
+    en: Project role
+  group: contactPerson
+  format: text
+  definition:
+    de: Rolle oder Funktion der Ansprechperson im Projekt
+    fr: Rôle ou fonction de la personne de contact dans le projet
+    it: Ruolo o funzione della persona di contatto nel progetto
+    en: Role or function of the contact person in the project
+- key: contactCompany
+  label:
+    de: Unternehmen
+    fr: Entreprise
+    it: Impresa
+    en: Company
+  group: address
+  format: multiline
+  definition:
+    de: Name des Unternehmens oder der Organisation
+    fr: Nom de l'entreprise ou de l'organisation
+    it: Nome dell'impresa o dell'organizzazione
+    en: Name of the company or organisation
+- key: contactStreet
+  label:
+    de: Strasse
+    fr: Rue
+    it: Via
+    en: Street
+  group: address
+  format: text
+  definition:
+    de: Strassenname der Adresse der Ansprechperson
+    fr: Nom de la rue de l'adresse de la personne de contact
+    it: Nome della via dell'indirizzo della persona di contatto
+    en: Street name of the address of the contact person
+- key: contactHouseNumber
+  label:
+    de: Hausnummer
+    fr: Numéro
+    it: Numero civico
+    en: House number
+  group: address
+  format: text
+  definition:
+    de: Hausnummer der Adresse der Ansprechperson
+    fr: Numéro de maison de l'adresse de la personne de contact
+    it: Numero civico dell'indirizzo della persona di contatto
+    en: House number of the address of the contact person
+- key: contactPostalCode
+  label:
+    de: Postleitzahl
+    fr: Code postal
+    it: Codice postale
+    en: Postal code
+  group: address
+  format: postalCode
+  definition:
+    de: Postleitzahl der Adresse der Ansprechperson
+    fr: Code postal de l'adresse de la personne de contact
+    it: Codice postale dell'indirizzo della persona di contatto
+    en: Postal code of the address of the contact person
+- key: contactCity
+  label:
+    de: Ort
+    fr: Localité
+    it: Località
+    en: City
+  group: address
+  format: text
+  definition:
+    de: Ortschaft der Adresse der Ansprechperson
+    fr: Localité de l'adresse de la personne de contact
+    it: Località dell'indirizzo della persona di contatto
+    en: Town or city of the address of the contact person
+- key: contactCountry
+  label:
+    de: Land
+    fr: Pays
+    it: Paese
+    en: Country
+  group: address
+  format: country
+  definition:
+    de: Land der Adresse der Ansprechperson als zweistelliger Ländercode nach ISO 3166-1 (z. B. CH)
+    fr: Pays de l'adresse de la personne de contact sous forme de code pays à deux lettres selon ISO 3166-1 (p. ex. CH)
+    it: Paese dell'indirizzo della persona di contatto come codice paese a due lettere secondo ISO 3166-1 (ad es. CH)
+    en: Country of the address of the contact person as a two-letter country code according to ISO 3166-1 (e.g. CH)
+- key: contactPhone
+  label:
+    de: Telefon
+    fr: Téléphone
+    it: Telefono
+    en: Phone
+  group: contactDetails
+  format: phone
+  definition:
+    de: Telefonnummer der Ansprechperson, möglichst im internationalen Format mit Ländervorwahl
+    fr: Numéro de téléphone de la personne de contact, si possible au format international avec indicatif du pays
+    it: Numero di telefono della persona di contatto, possibilmente in formato internazionale con prefisso del paese
+    en: Telephone number of the contact person, in international format with country code where possible
+- key: contactEmail
+  label:
+    de: E-Mail
+    fr: E-mail
+    it: E-mail
+    en: Email
+  group: contactDetails
+  format: email
+  definition:
+    de: E-Mail-Adresse der Ansprechperson
+    fr: Adresse e-mail de la personne de contact
+    it: Indirizzo e-mail della persona di contatto
+    en: Email address of the contact person
