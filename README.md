@@ -23,7 +23,7 @@ Dazu die durchsuchbare Website `docs/index.html` und das [JSON Schema](docs/sche
 ## Erzeugen
 
 ```
-pip install -r tools/requirements.txt
+python3 -m pip install -r tools/requirements.txt
 python3 tools/validate.py     # prüft die Daten
 python3 tools/build.py        # erzeugt alles in docs/
 ```
